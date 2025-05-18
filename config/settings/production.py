@@ -46,7 +46,7 @@ LOGGING = {
         "file": {
             "level": "INFO",
             "class": "logging.FileHandler",
-            "filename": "/var/log/earlystart_log.log",
+            "filename":  os.path.join(BASE_DIR, 'social_log.log'),
             "formatter": "app",
         },
     },
