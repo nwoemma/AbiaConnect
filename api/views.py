@@ -1,78 +1,134 @@
-from django.shortcuts import get_object_or_404,redirect
-from django.contrib.auth import authenticate,login,logout
-from rest_framework.decorators import api_view, permission_classes
-from rest_framework.response import Response
-from django.http import JsonResponse
-from django.urls import reverse
-from rest_framework import status
-from rest_framework.permissions import AllowAny,IsAuthenticated
-from rest_framework_simplejwt.tokens import RefreshToken
-from django.core.exceptions import PermissionDenied
 import logging
+import os
+import ssl
+import certifi
+import numpy as np
+import tensorflow as tf
+from keras.models import load_model
+
+from django.conf import settings
+from django.core.exceptions import PermissionDenied
+from django.core.mail import send_mail, get_connection
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.tokens import default_token_generator
+from django.http import JsonResponse, HttpResponseBadRequest
+from django.shortcuts import get_object_or_404, redirect
+from django.template.loader import render_to_string
+from django.urls import reverse
+from django.utils.encoding import force_bytes
+from django.utils.http import urlsafe_base64_encode
+from django.utils.html import strip_tags
+from django.views.decorators.csrf import csrf_exempt
+
+from rest_framework import status
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import AllowAny, IsAuthenticated
+from rest_framework.response import Response
+
 from rest_framework_simplejwt.authentication import JWTAuthentication
 from rest_framework_simplejwt.exceptions import InvalidToken, TokenError, AuthenticationFailed
-from accounts.models import User, Profile
-from chats.models import Chat, Conversion, ChatDetails,ChatCategory,Message
-from news.models import Notification, Announcement
-from django.utils.html import strip_tags
-from django.template.loader import render_to_string
-from .serializers import (
-    UserSerializer,
-    ProfileSerializer,
-    ChatSerializer,
-    NotificationSerializer,
-    AnnouncementSerializer,
-    ChatDetailSerializer,
-    MessageSerializer,
-    ChatCategorySerializer
-)
-from django.http import JsonResponse, HttpResponseBadRequest
-import os
-from django.utils.http import urlsafe_base64_encode
-from django.views.decorators.csrf import csrf_exempt
-from django.conf import settings
-from django.core.mail import send_mail
-from django.contrib.auth.tokens import default_token_generator
-from django.core.mail import get_connection
-from django.utils.encoding import force_bytes
-import ssl
+from rest_framework_simplejwt.tokens import RefreshToken
+
+from keras.preprocessing.sequence import pad_sequences
 import pickle
-import certifi
-# import json
-# from tensorflow.keras.models import load_model
-# from tensorflow.keras.preprocessing.sequence import pad_sequences
-import numpy as np
-import os
-from keras.models import load_model
+from accounts.models import User, Profile
+from chats.models import Chat, Conversion, ChatDetails, ChatCategory, Message
+from news.models import Notification, Announcement
+
+from .serializers import (
+    AnnouncementSerializer,
+    ChatCategorySerializer,
+    ChatDetailSerializer,
+    ChatSerializer,
+    MessageSerializer,
+    NotificationSerializer,
+    ProfileSerializer,
+    UserSerializer,
+)
+
 
 logger = logging.getLogger(__name__)
 
-# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# ssl_context = ssl.create_default_context(cafile=certifi.where())
-# MODEL_PATH_CAR = os.path.join(settings.BASE_DIR, 'ml_model', 'car_prices.h5')
-# MODEL_PATH_NLP = os.path.join(settings.BASE_DIR, 'ml_model', 'NLP(Deep_Learning).h5')
-# TOKENIZER_PATH = os.path.join(settings.BASE_DIR, 'ml_model', 'tokenizer.pkl')
+ssl_context = ssl.create_default_context(cafile=certifi.where())
+MODEL_PATH_CAR = os.path.join(settings.BASE_DIR, 'ml_model', 'car_prices.h5')
+MODEL_PATH_NLP = os.path.join(settings.BASE_DIR, 'ml_model', 'NLP(Deep_Learning).h5')
+TOKENIZER_PATH = os.path.join(settings.BASE_DIR, 'ml_model', 'tokenizer.pkl')
 
-# MODEL_PATH_SENTIMENT = os.path.join(BASE_DIR, 'ml_model', 'sentiment_model.h5')
+car_model = None
+sentiment_model = None
+tokenizer = None
 
+def get_tokenizer():
+    global tokenizer
+    if tokenizer is None:
+        if os.path.exists(TOKENIZER_PATH):
+            with open(TOKENIZER_PATH, 'rb') as f:
+                tokenizer = pickle.load(f)
+        else:
+            raise FileNotFoundError(f"Tokenizer not found at: {TOKENIZER_PATH}")
+    return tokenizer
 
-# car_model = None
-
-# def get_car_model():
-#     global car_model
-#     if car_model is None:
-#         if os.path.exists(MODEL_PATH_CAR):
-#             car_model = load_model(MODEL_PATH_CAR)
-#         else:
-#             raise FileNotFoundError(f"ML model not found at: {MODEL_PATH_CAR}")
-#     return car_model
+def get_car_model():
+    global car_model
+    if car_model is None:
+        if os.path.exists(MODEL_PATH_CAR):
+            car_model = load_model(MODEL_PATH_CAR)
+        else:
+            raise FileNotFoundError(f"ML model not found at: {MODEL_PATH_CAR}")
+    return car_model
 def get_tokens_for_user(user):
     refresh = RefreshToken.for_user(user)
     return {
         'refresh': str(refresh),
         'access': str(refresh.access_token),
     }
+
+
+tf.config.threading.set_intra_op_parallelism_threads(1)
+tf.config.threading.set_inter_op_parallelism_threads(1)
+# Use your manually defined BASE_
+sentiment_model = None
+
+def get_sentiment_model():
+    global sentiment_model
+    if sentiment_model is None:
+        if os.path.exists(MODEL_PATH_NLP):
+            sentiment_model = load_model(MODEL_PATH_NLP)
+        else:
+            raise FileNotFoundError(f"Sentiment model not found at: {MODEL_PATH_NLP}")
+    return sentiment_model
+
+@csrf_exempt
+def sentiment_api(request):
+    print("File exists:", os.path.exists(MODEL_PATH_CAR))
+    print("File exists:", os.path.exists(MODEL_PATH_NLP))
+    print("File exists:", os.path.exists(TOKENIZER_PATH))
+    if request.method == 'POST':
+        message = request.POST.get('message')
+        if not message:
+            return JsonResponse({'error': 'No message provided'}, status=400)
+
+        # Convert message to padded sequence
+        tokenizer_instance = get_tokenizer()
+        sequence = tokenizer.texts_to_sequences([message])
+        padded = pad_sequences(sequence, maxlen=100)
+
+        # Predict sentiment
+        model = get_sentiment_model()
+        prediction = sentiment_model.predict(padded)[0][0]
+
+        # Label based on threshold
+        sentiment = 'Positive' if prediction >= 0.5 else 'Negative'
+
+        return JsonResponse({
+            'message': message,
+            'sentiment': sentiment,
+            'score': float(prediction)
+        })
+
+    return JsonResponse({'error': 'Invalid request method'}, status=405)
 
 
 
