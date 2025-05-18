@@ -4,7 +4,13 @@ import os
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG =  False
 
-ALLOWED_HOSTS = ["abiaconnect.onrender.com", 'www.abiaconnect.onrender.com']
+ALLOWED_HOSTS = [
+    "abiaconnect.onrender.com",
+    "www.abiaconnect.onrender.com",
+    "abiaconnect.render.com",
+    "localhost",
+    "127.0.0.1",
+]
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
