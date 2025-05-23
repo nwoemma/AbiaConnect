@@ -1,0 +1,460 @@
+openapi: 3.0.3
+info:
+  title: API for AbiaConnect
+  version: 1.0.0
+  description: API for mobile team
+paths:
+  /api/schema/:
+    get:
+      operationId: api_schema_retrieve
+      description: |-
+        OpenApi3 schema for this API. Format can be selected via content negotiation.
+
+        - YAML: application/vnd.oai.openapi
+        - JSON: application/vnd.oai.openapi+json
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - json
+          - yaml
+      - in: query
+        name: lang
+        schema:
+          type: string
+          enum:
+          - af
+          - ar
+          - ar-dz
+          - ast
+          - az
+          - be
+          - bg
+          - bn
+          - br
+          - bs
+          - ca
+          - ckb
+          - cs
+          - cy
+          - da
+          - de
+          - dsb
+          - el
+          - en
+          - en-au
+          - en-gb
+          - eo
+          - es
+          - es-ar
+          - es-co
+          - es-mx
+          - es-ni
+          - es-ve
+          - et
+          - eu
+          - fa
+          - fi
+          - fr
+          - fy
+          - ga
+          - gd
+          - gl
+          - he
+          - hi
+          - hr
+          - hsb
+          - hu
+          - hy
+          - ia
+          - id
+          - ig
+          - io
+          - is
+          - it
+          - ja
+          - ka
+          - kab
+          - kk
+          - km
+          - kn
+          - ko
+          - ky
+          - lb
+          - lt
+          - lv
+          - mk
+          - ml
+          - mn
+          - mr
+          - ms
+          - my
+          - nb
+          - ne
+          - nl
+          - nn
+          - os
+          - pa
+          - pl
+          - pt
+          - pt-br
+          - ro
+          - ru
+          - sk
+          - sl
+          - sq
+          - sr
+          - sr-latn
+          - sv
+          - sw
+          - ta
+          - te
+          - tg
+          - th
+          - tk
+          - tr
+          - tt
+          - udm
+          - ug
+          - uk
+          - ur
+          - uz
+          - vi
+          - zh-hans
+          - zh-hant
+      tags:
+      - api
+      security:
+      - jwtAuth: []
+      - TokenAuth: []
+      responses:
+        '200':
+          content:
+            application/vnd.oai.openapi:
+              schema:
+                type: object
+                additionalProperties: {}
+            application/yaml:
+              schema:
+                type: object
+                additionalProperties: {}
+            application/vnd.oai.openapi+json:
+              schema:
+                type: object
+                additionalProperties: {}
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+          description: ''
+  /api/v2/rest_auth/announcements/:
+    get:
+      operationId: api_v2_rest_auth_announcements_retrieve
+      tags:
+      - api
+      security:
+      - jwtAuth: []
+      - TokenAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /api/v2/rest_auth/chatcategories/:
+    get:
+      operationId: api_v2_rest_auth_chatcategories_retrieve
+      tags:
+      - api
+      security:
+      - jwtAuth: []
+      - TokenAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /api/v2/rest_auth/chats/:
+    get:
+      operationId: api_v2_rest_auth_chats_retrieve
+      tags:
+      - api
+      security:
+      - jwtAuth: []
+      - TokenAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /api/v2/rest_auth/chats/{id}/:
+    get:
+      operationId: api_v2_rest_auth_chats_retrieve_2
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      security:
+      - jwtAuth: []
+      - TokenAuth: []
+      responses:
+        '200':
+          description: No response body
+  /api/v2/rest_auth/chats/{id}/users/:
+    get:
+      operationId: api_v2_rest_auth_chats_users_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      security:
+      - jwtAuth: []
+      - TokenAuth: []
+      responses:
+        '200':
+          description: No response body
+  /api/v2/rest_auth/chats/create/:
+    post:
+      operationId: api_v2_rest_auth_chats_create_create
+      tags:
+      - api
+      security:
+      - jwtAuth: []
+      - TokenAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /api/v2/rest_auth/create_chat_messages/{chat_pk}/:
+    post:
+      operationId: api_v2_rest_auth_create_chat_messages_create
+      parameters:
+      - in: path
+        name: chat_pk
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      security:
+      - jwtAuth: []
+      - TokenAuth: []
+      responses:
+        '200':
+          description: No response body
+  /api/v2/rest_auth/get_chat_messages/{chat_pk}/:
+    get:
+      operationId: api_v2_rest_auth_get_chat_messages_retrieve
+      parameters:
+      - in: path
+        name: chat_pk
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      security:
+      - jwtAuth: []
+      - TokenAuth: []
+      responses:
+        '200':
+          description: No response body
+  /api/v2/rest_auth/notifications/:
+    get:
+      operationId: api_v2_rest_auth_notifications_retrieve
+      tags:
+      - api
+      security:
+      - jwtAuth: []
+      - TokenAuth: []
+      responses:
+        '200':
+          description: No response body
+  /api/v2/rest_auth/notifications/{id}/mark-as-read/:
+    post:
+      operationId: api_v2_rest_auth_notifications_mark_as_read_create
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      security:
+      - jwtAuth: []
+      - TokenAuth: []
+      responses:
+        '200':
+          description: No response body
+  /api/v2/rest_auth/notifications/mark-all-as-read/:
+    post:
+      operationId: api_v2_rest_auth_notifications_mark_all_as_read_create
+      tags:
+      - api
+      security:
+      - jwtAuth: []
+      - TokenAuth: []
+      responses:
+        '200':
+          description: No response body
+  /api/v2/rest_auth/sentiment/:
+    post:
+      operationId: api_v2_rest_auth_sentiment_create
+      tags:
+      - api
+      security:
+      - jwtAuth: []
+      - TokenAuth: []
+      responses:
+        '200':
+          description: No response body
+  /api/v2/rest_auth/token/refresh/:
+    post:
+      operationId: api_v2_rest_auth_token_refresh_create
+      description: |-
+        Takes a refresh type JSON web token and returns an access type JSON web
+        token if the refresh token is valid.
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TokenRefresh'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/TokenRefresh'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/TokenRefresh'
+        required: true
+      security:
+      - TokenAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TokenRefresh'
+          description: ''
+  /api/v2/rest_auth/users/login/:
+    post:
+      operationId: api_v2_rest_auth_users_login_create
+      tags:
+      - api
+      security:
+      - jwtAuth: []
+      - TokenAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /api/v2/rest_auth/users/logout/:
+    post:
+      operationId: api_v2_rest_auth_users_logout_create
+      tags:
+      - api
+      security:
+      - jwtAuth: []
+      - TokenAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /api/v2/rest_auth/users/profile/:
+    get:
+      operationId: api_v2_rest_auth_users_profile_retrieve
+      description: Retrieve or update the profile of the logged-in user.
+      tags:
+      - api
+      security:
+      - jwtAuth: []
+      - TokenAuth: []
+      responses:
+        '200':
+          description: No response body
+    put:
+      operationId: api_v2_rest_auth_users_profile_update
+      description: Retrieve or update the profile of the logged-in user.
+      tags:
+      - api
+      security:
+      - jwtAuth: []
+      - TokenAuth: []
+      responses:
+        '200':
+          description: No response body
+  /api/v2/rest_auth/users/register/:
+    post:
+      operationId: api_v2_rest_auth_users_register_create
+      tags:
+      - api
+      security:
+      - jwtAuth: []
+      - TokenAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /api/v2/rest_auth/users/reset-password-request/:
+    post:
+      operationId: api_v2_rest_auth_users_reset_password_request_create
+      description: Endpoint to request a password reset.
+      tags:
+      - api
+      security:
+      - jwtAuth: []
+      - TokenAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /api/v2/rest_auth/users/reset-password/{uidb64}/{token}/:
+    post:
+      operationId: api_v2_rest_auth_users_reset_password_create
+      parameters:
+      - in: path
+        name: token
+        schema:
+          type: string
+        required: true
+      - in: path
+        name: uidb64
+        schema:
+          type: string
+        required: true
+      tags:
+      - api
+      security:
+      - jwtAuth: []
+      - TokenAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+components:
+  schemas:
+    TokenRefresh:
+      type: object
+      properties:
+        access:
+          type: string
+          readOnly: true
+        refresh:
+          type: string
+          writeOnly: true
+      required:
+      - access
+      - refresh
+  securitySchemes:
+    jwtAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
