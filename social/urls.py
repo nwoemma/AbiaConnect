@@ -26,11 +26,11 @@ from drf_spectacular.views import (
 )
 from django.urls import path, include
 from django.contrib import admin
-from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v2/rest_auth/', include('api.urls')),
+    path('', include('chats.urls')),
     path('accounts/', include('accounts.urls', namespace='accounts')),
 
     path('api/schema/', SpectacularAPIView.as_view(permission_classes=[]), name='schema'),
