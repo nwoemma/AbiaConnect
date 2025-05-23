@@ -3,7 +3,7 @@ import os
 import ssl
 import certifi
 import numpy as np
-import tensorflow as tf
+
 from keras.models import load_model
 import json
 from django.conf import settings
@@ -87,9 +87,8 @@ def get_tokens_for_user(user):
         'access': str(refresh.access_token),
     }
 
-
+import tensorflow as tf
 tf.config.threading.set_intra_op_parallelism_threads(1)
-tf.config.threading.set_inter_op_parallelism_threads(1)
 # Use your manually defined BASE_
 sentiment_model = None
 
@@ -472,7 +471,7 @@ def sentiment_api(request):
 
     try:
         seq = tokenizer.texts_to_sequences([text])
-        padded = pad_sequences(seq, maxlen=max_len, padding='post', truncating='post')
+        padded = manual_pad_sequences(seq, maxlen=max_len, padding='post', truncating='post')
 
         preds = model_1.predict(padded)  # make sure model_1 is lazily loaded too, if needed
         pred_class = np.argmax(preds)
