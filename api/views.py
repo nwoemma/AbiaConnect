@@ -29,7 +29,6 @@ from rest_framework_simplejwt.authentication import JWTAuthentication
 from rest_framework_simplejwt.exceptions import InvalidToken, TokenError, AuthenticationFailed
 from rest_framework_simplejwt.tokens import RefreshToken
 
-from keras.preprocessing.sequence import pad_sequences
 import pickle
 from accounts.models import User, Profile
 from chats.models import Chat, Conversion, ChatDetails, ChatCategory, Message
@@ -45,6 +44,9 @@ from .serializers import (
     ProfileSerializer,
     UserSerializer,
 )
+import numpy as np
+
+
 
 
 logger = logging.getLogger(__name__)
@@ -91,6 +93,24 @@ tf.config.threading.set_inter_op_parallelism_threads(1)
 # Use your manually defined BASE_
 sentiment_model = None
 
+
+def manual_pad_sequences(sequences, maxlen=100, padding='pre', value=0):
+    # sequences is a list of lists (token IDs)
+    padded = np.full((len(sequences), maxlen), value)
+
+    for i, seq in enumerate(sequences):
+        if len(seq) > maxlen:
+            if padding == 'pre':
+                seq = seq[-maxlen:]  # truncate from the front
+            else:
+                seq = seq[:maxlen]   # truncate from the end
+
+        if padding == 'pre':
+            padded[i, -len(seq):] = seq
+        else:  # 'post' padding
+            padded[i, :len(seq)] = seq
+    return padded
+
 def get_sentiment_model():
     global sentiment_model
     if sentiment_model is None:
@@ -113,7 +133,7 @@ def sentiment_api(request):
         # Convert message to padded sequence
         tokenizer_instance = get_tokenizer()
         sequence = tokenizer.texts_to_sequences([message])
-        padded = pad_sequences(sequence, maxlen=100)
+        padded = manual_pad_sequences(sequence, maxlen=100)
 
         # Predict sentiment
         model = get_sentiment_model()
