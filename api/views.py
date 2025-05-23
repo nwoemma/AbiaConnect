@@ -4,7 +4,7 @@ import ssl
 import certifi
 import numpy as np
 
-from keras.models import load_model
+
 import json
 from django.conf import settings
 from django.core.exceptions import PermissionDenied
@@ -73,6 +73,7 @@ def get_tokenizer():
     return tokenizer
 
 def get_car_model():
+    from keras.models import load_model
     global car_model
     if car_model is None:
         if os.path.exists(MODEL_PATH_CAR):
@@ -111,6 +112,7 @@ def manual_pad_sequences(sequences, maxlen=100, padding='pre', value=0):
     return padded
 
 def get_sentiment_model():
+    from keras.models import load_model
     global sentiment_model
     if sentiment_model is None:
         if os.path.exists(MODEL_PATH_NLP):
