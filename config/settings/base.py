@@ -14,6 +14,7 @@ from pathlib import Path
 #from decouple import config
 from dotenv import load_dotenv
 import os
+from datetime import timedelta
 
 #load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -167,7 +168,10 @@ EMAIL_HOST_PASSWORD = 'yxvv jgvk iaoz iljl'
 DEFAULT_FROM_EMAIL = 'no-reply@yourdomain.com'
 
 FRONTEND_URL = "http://localhost:3000"
-
+SIMPLE_JWT = {
+    "ACCESS_TOKEN_LIFETIME": timedelta(days=365),  # default is 5 minutes
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=1),     # default is 1 day
+}
 '''
 TWILIO_ACCOUNT_SID = config('TWILIO_ACCOUNT_SID')
 TWILIO_AUTH_TOKEN = config('TWILIO_AUTH_TOKEN')

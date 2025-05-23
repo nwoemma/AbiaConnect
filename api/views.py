@@ -5,7 +5,7 @@ import certifi
 import numpy as np
 import tensorflow as tf
 from keras.models import load_model
-
+import json
 from django.conf import settings
 from django.core.exceptions import PermissionDenied
 from django.core.mail import send_mail, get_connection
@@ -129,6 +129,7 @@ def sentiment_api(request):
         })
 
     return JsonResponse({'error': 'Invalid request method'}, status=405)
+
 
 
 
@@ -434,34 +435,34 @@ def announcement_list(request):
 # MODEL_PATH_SENTIMENT = os.path.join(BASE_DIR, 'ml_model', 'sentiment_model.h5')
 # model_1 = None
 
-# @csrf_exempt
-# @api_view(["POST"])
-# def sentiment_api(request):
-#     if request.method != 'POST':
-#         return HttpResponseBadRequest("Only POST requests allowed")
+@csrf_exempt
+@api_view(["POST"])
+def sentiment_api(request):
+    if request.method != 'POST':
+        return HttpResponseBadRequest("Only POST requests allowed")
 
-#     try:
-#         data = json.loads(request.body)
-#     except json.JSONDecodeError:
-#         return JsonResponse({"error": "Invalid JSON"}, status=400)
+    try:
+        data = json.loads(request.body)
+    except json.JSONDecodeError:
+        return JsonResponse({"error": "Invalid JSON"}, status=400)
 
-#     text = data.get('text', '').strip()
-#     if not text:
-#         return JsonResponse({"error": "No text provided"}, status=400)
+    text = data.get('text', '').strip()
+    if not text:
+        return JsonResponse({"error": "No text provided"}, status=400)
 
-#     try:
-#         seq = tokenizer.texts_to_sequences([text])
-#         padded = pad_sequences(seq, maxlen=max_len, padding='post', truncating='post')
+    try:
+        seq = tokenizer.texts_to_sequences([text])
+        padded = pad_sequences(seq, maxlen=max_len, padding='post', truncating='post')
 
-#         preds = model_1.predict(padded)  # make sure model_1 is lazily loaded too, if needed
-#         pred_class = np.argmax(preds)
+        preds = model_1.predict(padded)  # make sure model_1 is lazily loaded too, if needed
+        pred_class = np.argmax(preds)
 
-#         labels = {0: "NEGATIVE", 1: "POSITIVE", 2: "NEUTRAL", 3: "IRRELEVANT"}
-#         sentiment = labels.get(pred_class, "UNKNOWN")
-#         confidence = float(np.max(preds))
+        labels = {0: "NEGATIVE", 1: "POSITIVE", 2: "NEUTRAL", 3: "IRRELEVANT"}
+        sentiment = labels.get(pred_class, "UNKNOWN")
+        confidence = float(np.max(preds))
 
-#         return JsonResponse({"sentiment": sentiment, "confidence": confidence})
+        return JsonResponse({"sentiment": sentiment, "confidence": confidence})
 
-#     except Exception as e:
-#         logger.error(f"Sentiment prediction error: {e}")
-#         return JsonResponse({"error": "Internal server error"}, status=500)
+    except Exception as e:
+        logger.error(f"Sentiment prediction error: {e}")
+        return JsonResponse({"error": "Internal server error"}, status=500)
