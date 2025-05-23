@@ -87,13 +87,13 @@ def get_tokens_for_user(user):
         'access': str(refresh.access_token),
     }
 
-import tensorflow as tf
-tf.config.threading.set_intra_op_parallelism_threads(1)
 # Use your manually defined BASE_
 sentiment_model = None
 
 
 def manual_pad_sequences(sequences, maxlen=100, padding='pre', value=0):
+    import tensorflow as tf
+    tf.config.threading.set_intra_op_parallelism_threads(1)
     # sequences is a list of lists (token IDs)
     padded = np.full((len(sequences), maxlen), value)
 
