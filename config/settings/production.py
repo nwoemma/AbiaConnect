@@ -1,5 +1,6 @@
 from .base import *
 import os
+import dj_database_url
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG =  True
@@ -16,16 +17,12 @@ ALLOWED_HOSTS = [
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'abia_db',
-        'USER': 'abia_user',
-        'PASSWORD': 'Abia@123',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
+    'default': dj_database_url.config(
+        default=os.environ.get('DATABASE_URL'),
+        conn_max_age=600,
+        ssl_require=True
+    )
 }
-
 # SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 # DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 # DATABASES = {
