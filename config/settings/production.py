@@ -15,29 +15,29 @@ ALLOWED_HOSTS = [
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'abia_db',
-#         'USER': 'abia_user',
-#         'PASSWORD': 'Abia@123',
-#         'HOST': 'localhost',
-#         'PORT': '5432',
-#     }
-# }
-
-# SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
-DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('DB_NAME'),
-        'USER': os.environ.get('DB_USER'),
-        'PASSWORD': os.environ.get('DB_PASSWORD'),
-        'HOST': os.environ.get('DB_HOST'),
-        'PORT': os.environ.get('DB_PORT'),
+        'NAME': 'abia_db',
+        'USER': 'abia_user',
+        'PASSWORD': 'Abia@123',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
+
+# SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
+# DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': os.environ.get('DB_NAME'),
+#         'USER': os.environ.get('DB_USER'),
+#         'PASSWORD': os.environ.get('DB_PASSWORD'),
+#         'HOST': os.environ.get('DB_HOST'),
+#         'PORT': os.environ.get('DB_PORT'),
+#     }
+# }
 
 STATIC_ROOT = BASE_DIR/ 'static'
 

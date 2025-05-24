@@ -91,7 +91,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'social.wsgi.application'
 
-AUTH_USER_MODEL = 'accounts.User'
+
 AUTHENTICATION_BACKENDS = [
     'accounts.backend.EmailBackend',
 ]
