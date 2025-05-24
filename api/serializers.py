@@ -6,7 +6,7 @@ from chats.models import Chat,Message,ChatDetails,ChatCategory
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['id', 'username', 'email', 'password', 'is_staff']
+        fields = ['id', 'username', 'email', 'password', 'is_staff','first_name', 'last_name']
         read_only_fields = ['id', 'is_staff']
     def create(self, validated_data):
         user = User.objects.create_user(
