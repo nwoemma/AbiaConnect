@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "abiaconnect"
+version = "0.1.0"
+description = "AbiaConnect Django project"
+authors = ["Your Name <your.email@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+Django = "^5.2"
+djangorestframework = "^3.14"
+gunicorn = "^20.1"
+psycopg2-binary = "^2.9"  # If you use PostgreSQL
+# Add more dependencies you use below
+# tensorflow = "^2.13"   # For ML model if needed
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.0"
+black = "^23.3"
+isort = "^5.12"
+flake8 = "^6.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
