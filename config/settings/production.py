@@ -3,7 +3,7 @@ import os
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG =  False
-
+SECRET_KEY = 'django-insecure-5s^^j6r5n^x2pu+e!nn+&2jxr^=!4*=*$1p@o5=ikpk#kh6_+u'
 ALLOWED_HOSTS = [
     "abiaconnect.onrender.com",
     "www.abiaconnect.onrender.com",
@@ -17,16 +17,16 @@ ALLOWED_HOSTS = [
 
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'social',
-#         'USER': 'social',
-#         'PASSWORD': 'def@ult2017',
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'abia_db',
+#         'USER': 'abia_user',
+#         'PASSWORD': 'Abia@123',
 #         'HOST': 'localhost',
-#         'PORT': '',
+#         'PORT': '5432',
 #     }
 # }
 
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
+# SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 DATABASES = {
     'default': {

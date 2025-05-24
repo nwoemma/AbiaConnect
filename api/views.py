@@ -406,58 +406,60 @@ def announcement_list(request):
     serializer = AnnouncementSerializer(announcements, many=True)
     return Response(serializer.data, status=status.HTTP_200_OK)
 
-# car_model = None
-# def get_car_model():
-#     global car_model
-#     if car_model is None:
-#         if os.path.exists(MODEL_PATH_CAR):
-#             car_model = load_model(MODEL_PATH_CAR)
-#         else:
-#             raise FileNotFoundError(f"Car price model not found at: {MODEL_PATH_CAR}")
-#     return car_model
+BASE_DIR = settings.BASE_DIR
+MODEL_PATH_CAR = os.path.join(BASE_DIR, 'ml_model', 'car_price_model.h5')
+MODEL_PATH_SENTIMENT = os.path.join(BASE_DIR, 'ml_model', 'sentiment_model.h5')
 
+# === Lazy Loaded Models ===
+car_model = None
+def get_car_model():
+    from keras.models import load_model
+    global car_model
+    if car_model is None:
+        if os.path.exists(MODEL_PATH_CAR):
+            car_model = load_model(MODEL_PATH_CAR)
+        else:
+            raise FileNotFoundError(f"Car price model not found at: {MODEL_PATH_CAR}")
+    return car_model
 
+sentiment_model = None
+def get_sentiment_model():
+    from keras.models import load_model
+    global sentiment_model
+    if sentiment_model is None:
+        if os.path.exists(MODEL_PATH_SENTIMENT):
+            sentiment_model = load_model(MODEL_PATH_SENTIMENT)
+        else:
+            raise FileNotFoundError(f"Sentiment model not found at: {MODEL_PATH_SENTIMENT}")
+    return sentiment_model
 
-# model_1 = None
-# def get_sentiment_model():
-#     global model_1
-#     if model_1 is None:
-#         if os.path.exists(MODEL_PATH_SENTIMENT):
-#             model_1 = load_model(MODEL_PATH_SENTIMENT)
-#         else:
-#             raise FileNotFoundError(f"Sentiment model not found at: {MODEL_PATH_SENTIMENT}")
-#     return model_1
+# === Car Price Prediction API ===
+@api_view(['POST'])
+@permission_classes([AllowAny])
+def predict_car_price(request):
+    data = request.data
 
-# @api_view(['POST'])
-# @permission_classes([AllowAny])
-# def predict_car_price(request):
-#     data = request.data
+    try:
+        year = float(data['year'])
+        mileage = float(data['mileage'])
+        engine_size = float(data['engine_size'])
+    except (KeyError, ValueError):
+        return Response({'error': 'Invalid input data'}, status=400)
 
-#     try:
-#         year = float(data['year'])
-#         mileage = float(data['mileage'])
-#         engine_size = float(data['engine_size'])
-#     except (KeyError, ValueError):
-#         return Response({'error': 'Invalid input data'}, status=400)
+    input_features = np.array([[year, mileage, engine_size]])
 
-#     # Prepare the input as a 2D NumPy array
-#     input_features = np.array([[year, mileage, engine_size]])
+    try:
+        model = get_car_model()
+        prediction = model.predict(input_features)
+        predicted_price = float(prediction[0])
+        return Response({'predicted_price': predicted_price}, status=200)
+    except Exception as e:
+        return Response({'error': str(e)}, status=500)
 
-#     try:
-#         model = get_car_model()
-#         prediction = model.predict(input_features)
-
-#         # Assuming the model returns a single value
-#         predicted_price = float(prediction[0])
-#         return Response({'predicted_price': predicted_price}, status=200)
-#     except Exception as e:
-#         return Response({'error': str(e)}, status=500)
-    
-# MODEL_PATH_SENTIMENT = os.path.join(BASE_DIR, 'ml_model', 'sentiment_model.h5')
-# model_1 = None
-
+# === Sentiment Analysis API ===
 @csrf_exempt
 @api_view(["POST"])
+@permission_classes([AllowAny])
 def sentiment_api(request):
     if request.method != 'POST':
         return HttpResponseBadRequest("Only POST requests allowed")
@@ -475,15 +477,19 @@ def sentiment_api(request):
         seq = tokenizer.texts_to_sequences([text])
         padded = manual_pad_sequences(seq, maxlen=max_len, padding='post', truncating='post')
 
-        preds = model_1.predict(padded)  # make sure model_1 is lazily loaded too, if needed
-        pred_class = np.argmax(preds)
+        model = get_sentiment_model()
+        preds = model.predict(padded)
+        pred_class = int(np.argmax(preds))
 
         labels = {0: "NEGATIVE", 1: "POSITIVE", 2: "NEUTRAL", 3: "IRRELEVANT"}
         sentiment = labels.get(pred_class, "UNKNOWN")
         confidence = float(np.max(preds))
 
-        return JsonResponse({"sentiment": sentiment, "confidence": confidence})
+        return JsonResponse({
+            "sentiment": sentiment,
+            "confidence": round(confidence, 3)
+        })
 
     except Exception as e:
-        logger.error(f"Sentiment prediction error: {e}")
+        logging.error(f"Sentiment prediction error: {e}")
         return JsonResponse({"error": "Internal server error"}, status=500)
