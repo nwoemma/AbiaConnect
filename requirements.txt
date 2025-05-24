@@ -78,7 +78,7 @@ python-dateutil==2.9.0.post0
 python-decouple==3.8
 python-dotenv==1.1.0
 pytz==2025.2
-pywin32==305
+# pywin32==305
 PyYAML==6.0.2
 pyzmq==26.4.0
 referencing==0.36.2
