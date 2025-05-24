@@ -98,11 +98,11 @@ sqlparse==0.5.3
 statsmodels==0.14.4
 tensorboard==2.13.0
 tensorboard-data-server==0.7.2
-tensorflow==2.12.0
-tensorflow-cpu==2.13.0
-tensorflow-estimator==2.13.0
-tensorflow-intel==2.13.0
-tensorflow-io-gcs-filesystem==0.31.0
+# tensorflow==2.12.0
+# tensorflow-cpu==2.13.0
+# tensorflow-estimator==2.13.0
+# tensorflow-intel==2.13.0
+# tensorflow-io-gcs-filesystem==0.31.0
 termcolor==3.1.0
 threadpoolctl==3.6.0
 tinycss2==1.4.0
