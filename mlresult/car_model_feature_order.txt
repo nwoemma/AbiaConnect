@@ -1,0 +1,18 @@
+Mileage
+EngineV
+Year
+Brand_BMW
+Brand_Mercedes-Benz
+Brand_Mitsubishi
+Brand_Renault
+Brand_Toyota
+Brand_Volkswagen
+Body_hatch
+Body_other
+Body_sedan
+Body_vagon
+Body_van
+Engine Type_Gas
+Engine Type_Other
+Engine Type_Petrol
+Registration_yes
