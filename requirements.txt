@@ -85,7 +85,7 @@ referencing==0.36.2
 regex==2024.11.6
 requests==2.32.3
 requests-oauthlib==2.0.0
-rest-framework-simplejwt==0.0.2
+# rest-framework-simplejwt==0.0.2
 rich==14.0.0
 rpds-py==0.25.0
 rsa==4.9.1
