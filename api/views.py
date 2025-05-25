@@ -61,8 +61,8 @@ TOKENIZER_PATH = os.path.join(settings.BASE_DIR, 'mlresult', 'tokenizer.pkl')
 
 
 regression = joblib.load('mlresult/car_model.pkl')
-scaler = joblib.load('ml_model/car_scaler.pkl')
-with open('ml_model/car_model_feature_order.txt') as f:
+scaler = joblib.load('mlresult/car_scaler.pkl')
+with open('mlresult/car_model_feature_order.txt') as f:
     FEATURE_ORDER = [line.strip() for line in f]
 
 
