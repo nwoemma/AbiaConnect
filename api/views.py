@@ -3,8 +3,8 @@ import os
 import ssl
 import certifi
 import numpy as np
-
-
+import pandas
+import pandas as pd
 import json
 from django.conf import settings
 from django.core.exceptions import PermissionDenied
@@ -45,6 +45,8 @@ from .serializers import (
     UserSerializer,
 )
 import numpy as np
+import joblib
+
 
 
 
@@ -52,15 +54,35 @@ import numpy as np
 logger = logging.getLogger(__name__)
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 ssl_context = ssl.create_default_context(cafile=certifi.where())
-MODEL_PATH_CAR = os.path.join(settings.BASE_DIR, 'ml_model', 'car_prices.h5')
-MODEL_PATH_NLP = os.path.join(settings.BASE_DIR, 'ml_model', 'NLP(Deep_Learning).h5')
-TOKENIZER_PATH = os.path.join(settings.BASE_DIR, 'ml_model', 'tokenizer.pkl')
+MODEL_PATH_CAR = os.path.join(settings.BASE_DIR, 'mlresult', 'car_model.pkl')
+MODEL_PATH_SENTIMENT = os.path.join(BASE_DIR, 'ml_result', 'NLP.h5')
+TOKENIZER_PATH = os.path.join(settings.BASE_DIR, 'mlresult', 'tokenizer.pkl')
+
+
+regression = joblib.load('mlresult/car_model.pkl')
+scaler = joblib.load('ml_model/car_scaler.pkl')
+with open('ml_model/car_model_feature_order.txt') as f:
+    FEATURE_ORDER = [line.strip() for line in f]
+
 
 car_model = None
 sentiment_model = None
 tokenizer = None
+
+BASE_DIR = settings.BASE_DIR
+
+
+sentiment_model = None
+def get_sentiment_model():
+    from keras.models import load_model
+    global sentiment_model
+    if sentiment_model is None:
+        if os.path.exists(MODEL_PATH_SENTIMENT):
+            sentiment_model = load_model(MODEL_PATH_SENTIMENT)
+        else:
+            raise FileNotFoundError(f"Sentiment model not found at: {MODEL_PATH_SENTIMENT}")
+    return sentiment_model
 
 def get_tokenizer():
     global tokenizer
@@ -73,14 +95,14 @@ def get_tokenizer():
     return tokenizer
 
 def get_car_model():
-    from keras.models import load_model
     global car_model
     if car_model is None:
         if os.path.exists(MODEL_PATH_CAR):
-            car_model = load_model(MODEL_PATH_CAR)
+            car_model = joblib.load(MODEL_PATH_CAR)
         else:
-            raise FileNotFoundError(f"ML model not found at: {MODEL_PATH_CAR}")
+            raise FileNotFoundError(f"Car model not found at: {MODEL_PATH_CAR}")
     return car_model
+
 def get_tokens_for_user(user):
     refresh = RefreshToken.for_user(user)
     return {
@@ -111,49 +133,7 @@ def manual_pad_sequences(sequences, maxlen=100, padding='pre', value=0):
             padded[i, :len(seq)] = seq
     return padded
 
-def get_sentiment_model():
-    from keras.models import load_model
-    global sentiment_model
-    if sentiment_model is None:
-        if os.path.exists(MODEL_PATH_NLP):
-            sentiment_model = load_model(MODEL_PATH_NLP)
-        else:
-            raise FileNotFoundError(f"Sentiment model not found at: {MODEL_PATH_NLP}")
-    return sentiment_model
-
 @csrf_exempt
-def sentiment_api(request):
-    print("File exists:", os.path.exists(MODEL_PATH_CAR))
-    print("File exists:", os.path.exists(MODEL_PATH_NLP))
-    print("File exists:", os.path.exists(TOKENIZER_PATH))
-    if request.method == 'POST':
-        message = request.POST.get('message')
-        if not message:
-            return JsonResponse({'error': 'No message provided'}, status=400)
-
-        # Convert message to padded sequence
-        tokenizer_instance = get_tokenizer()
-        sequence = tokenizer.texts_to_sequences([message])
-        padded = manual_pad_sequences(sequence, maxlen=100)
-
-        # Predict sentiment
-        model = get_sentiment_model()
-        prediction = sentiment_model.predict(padded)[0][0]
-
-        # Label based on threshold
-        sentiment = 'Positive' if prediction >= 0.5 else 'Negative'
-
-        return JsonResponse({
-            'message': message,
-            'sentiment': sentiment,
-            'score': float(prediction)
-        })
-
-    return JsonResponse({'error': 'Invalid request method'}, status=405)
-
-
-
-
 def send_password_reset_email(request, user):
     """
     Sends a password reset email to the user.
@@ -197,6 +177,7 @@ def send_password_reset_email(request, user):
     except Exception as e:
         logger.error(f"Error sending password reset email: {e}")
         return False # Return false on error
+    
 @api_view(['POST'])
 @permission_classes([AllowAny])
 def register(request):
@@ -269,7 +250,6 @@ def user_profile(request):
             return Response(serializer.data)
         logger.error(f"PUT request, Serializer errors: {serializer.errors}")
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
 
 @api_view(["POST"])
 @permission_classes([AllowAny])
@@ -352,11 +332,13 @@ def chat_messages(request, chat_pk):
         return redirect('api:get_chat_messages', chat_pk)
     elif request.method == 'POST':
         return redirect('api:create_chat_messages', chat_pk)
+    
 @api_view(['GET']) 
 def get_chat_messages(request, chat_pk):
     messages = Message.objects.filter(chat_id=chat_pk)
     serializer = MessageSerializer(messages, many=True)
     return Response(serializer.data, status=status.HTTP_200_OK)
+
 @api_view(["POST"])
 def create_chat_message(request, chat_pk):
     chat = get_object_or_404(Chat, pk=chat_pk)
@@ -370,7 +352,6 @@ def create_chat_message(request, chat_pk):
     message = serializer.save(chat=chat, sender=request.user, receiver=receiver_user)
     return Response(serializer.data,status=status.HTTP_201_CREATED)
     
-
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def notification_list(request):
@@ -393,70 +374,63 @@ def notification_mark_all_as_read(request):
     return Response({'message': 'All notifications marked as read'}, status=status.HTTP_200_OK)
 
 @api_view(['GET'])
-@permission_classes([AllowAny]) # Adjust permissions as needed
+@permission_classes([AllowAny]) 
 def chat_category_list(request):
     categories = ChatCategory.objects.all()
     serializer = ChatCategorySerializer(categories, many=True)
     return Response(serializer.data, status=status.HTTP_200_OK)
 
 @api_view(['GET'])
-@permission_classes([AllowAny])  # Adjust permissions as needed
+@permission_classes([AllowAny]) 
 def announcement_list(request):
     announcements = Announcement.objects.all()
     serializer = AnnouncementSerializer(announcements, many=True)
     return Response(serializer.data, status=status.HTTP_200_OK)
 
-BASE_DIR = settings.BASE_DIR
-MODEL_PATH_CAR = os.path.join(BASE_DIR, 'ml_model', 'car_price_model.h5')
-MODEL_PATH_SENTIMENT = os.path.join(BASE_DIR, 'ml_model', 'sentiment_model.h5')
-
-# === Lazy Loaded Models ===
-car_model = None
-def get_car_model():
-    from keras.models import load_model
-    global car_model
-    if car_model is None:
-        if os.path.exists(MODEL_PATH_CAR):
-            car_model = load_model(MODEL_PATH_CAR)
-        else:
-            raise FileNotFoundError(f"Car price model not found at: {MODEL_PATH_CAR}")
-    return car_model
-
-sentiment_model = None
-def get_sentiment_model():
-    from keras.models import load_model
-    global sentiment_model
-    if sentiment_model is None:
-        if os.path.exists(MODEL_PATH_SENTIMENT):
-            sentiment_model = load_model(MODEL_PATH_SENTIMENT)
-        else:
-            raise FileNotFoundError(f"Sentiment model not found at: {MODEL_PATH_SENTIMENT}")
-    return sentiment_model
-
-# === Car Price Prediction API ===
 @api_view(['POST'])
 @permission_classes([AllowAny])
 def predict_car_price(request):
     data = request.data
 
+    # Required fields for API input
     try:
         year = float(data['year'])
         mileage = float(data['mileage'])
         engine_size = float(data['engine_size'])
+        brand = data['brand']
+        body = data['body']
+        engine_type = data['engine_type']
+        registration = data['registration']
     except (KeyError, ValueError):
         return Response({'error': 'Invalid input data'}, status=400)
 
-    input_features = np.array([[year, mileage, engine_size]])
+    # Build a dict for one row
+    row = {
+        'Mileage': mileage,
+        'EngineV': engine_size,
+        'Year': year,
+        # One-hot columns below, must match your training dummies
+        f'Brand_{brand}': 1,
+        f'Body_{body}': 1,
+        f'Engine Type_{engine_type}': 1,
+        'Registration_yes': 1 if registration == "yes" else 0
+    }
+    # Fill any missing columns with 0
+    for col in FEATURE_ORDER:
+        row.setdefault(col, 0)
+
+    # Build DataFrame in the right column order
+    input_df = pd.DataFrame([row], columns=FEATURE_ORDER)
+
+    # Scale input
+    input_scaled = scaler.transform(input_df)
 
     try:
-        model = get_car_model()
-        prediction = model.predict(input_features)
-        predicted_price = float(prediction[0])
+        prediction_log = regression.predict(input_scaled)[0]
+        predicted_price = float(10 ** prediction_log)
         return Response({'predicted_price': predicted_price}, status=200)
     except Exception as e:
-        return Response({'error': str(e)}, status=500)
-
-# === Sentiment Analysis API ===
+        return Response({'error': str(e)}, status=500) 
 @csrf_exempt
 @api_view(["POST"])
 @permission_classes([AllowAny])
@@ -472,7 +446,7 @@ def sentiment_api(request):
     text = data.get('text', '').strip()
     if not text:
         return JsonResponse({"error": "No text provided"}, status=400)
-
+    max_len = 20
     try:
         seq = tokenizer.texts_to_sequences([text])
         padded = manual_pad_sequences(seq, maxlen=max_len, padding='post', truncating='post')

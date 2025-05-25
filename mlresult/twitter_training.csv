@@ -1,0 +1,7 @@
+ID,Game,Sentiment,Post
+1,GameA,Positive,"I love playing this game! It's so fun."
+2,GameB,Negative,"This game is boring and frustrating."
+3,GameA,Neutral,"It's just an average game."
+4,GameC,Irrelevant,"Does anyone know the game release date?"
+5,GameB,Positive,"Amazing graphics and gameplay!"
+6,GameC,Negative,"The controls are terrible."

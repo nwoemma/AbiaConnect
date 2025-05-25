@@ -32,5 +32,6 @@ urlpatterns = [
     # Chat Category and Announcement
     path('chatcategories/', views.chat_category_list, name='chat_category_list'),
     path('announcements/', views.announcement_list, name='announcement_list'),
-    path('sentiment/', views.sentiment_api,name="sentiment")
+    path('sentiment/', views.sentiment_api,name="sentiment"),
+    path('predict/', views.predict_car_price, name="predict")
 ]

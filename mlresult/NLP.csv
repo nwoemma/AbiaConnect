@@ -1,0 +1,49 @@
+
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ embedding (Embedding)       (None, 20, 100)           1000000
+
+ bidirectional (Bidirection  (None, 20, 256)           176640
+ al)
+
+ bidirectional_1 (Bidirecti  (None, 256)               296448
+ onal)
+
+ dropout (Dropout)           (None, 256)               0
+
+ dense (Dense)               (None, 64)                16448
+
+ dropout_1 (Dropout)         (None, 64)                0
+
+ dense_1 (Dense)             (None, 4)                 260
+
+=================================================================
+Total params: 1489796 (5.68 MB)
+Trainable params: 1489796 (5.68 MB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+Epoch 1/5
+1/1 [==============================] - 27s 27s/step - loss: 1.3815 - accuracy: 0.2500 - val_loss: 1.3898 - val_accuracy: 0.5000
+Epoch 2/5
+1/1 [==============================] - 0s 207ms/step - loss: 1.3865 - accuracy: 0.0000e+00 - val_loss: 1.4047 - val_accuracy: 0.0000e+00
+Epoch 3/5
+1/1 [==============================] - 0s 154ms/step - loss: 1.3652 - accuracy: 0.5000 - val_loss: 1.4151 - val_accuracy: 0.0000e+00
+Epoch 4/5
+1/1 [==============================] - 0s 158ms/step - loss: 1.3246 - accuracy: 0.5000 - val_loss: 1.4270 - val_accuracy: 0.0000e+00
+Epoch 5/5
+1/1 [==============================] - 0s 190ms/step - loss: 1.3060 - accuracy: 0.7500 - val_loss: 1.4433 - val_accuracy: 0.0000e+00
+(2, 20)
+[]
+1/1 [==============================] - 2s 2s/step
+1/1 [==============================] - 0s 40ms/step
+0
+1
+enter comment please  Fine
+1/1 [==============================] - 0s 53ms/step
+0
+Sentiment : NEGATIVE
+enter comment please  Wow
+1/1 [==============================] - 0s 48ms/step
+0
+Sentiment : NEGATIVE
