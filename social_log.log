@@ -3262,3 +3262,163 @@ LINE 1: ...ession_data", "django_session"."expire_date" FROM "django_se...
 2025-05-25 18:00:14 [WARNING ] (basehttp.log_message) "POST /api/v2/rest_auth/users/login/ HTTP/1.1" 400 10458
 2025-05-25 18:01:01 [INFO    ] (basehttp.log_message) "POST /api/v2/rest_auth/users/login/ HTTP/1.1" 200 10902
 2025-05-25 18:01:01 [INFO    ] (basehttp.log_message) "POST /api/v2/rest_auth/users/login/ HTTP/1.1" 200 10902
+2025-05-26 09:58:29 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-26 09:58:29 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-26 09:59:24 [WARNING ] (log.log_response) Not Found: /api/v2/rest/users/register/
+2025-05-26 09:59:24 [WARNING ] (log.log_response) Not Found: /api/v2/rest/users/register/
+2025-05-26 09:59:24 [WARNING ] (basehttp.log_message) "GET /api/v2/rest/users/register/ HTTP/1.1" 404 179
+2025-05-26 09:59:24 [WARNING ] (basehttp.log_message) "GET /api/v2/rest/users/register/ HTTP/1.1" 404 179
+2025-05-26 09:59:25 [WARNING ] (log.log_response) Not Found: /favicon.ico
+2025-05-26 09:59:25 [WARNING ] (log.log_response) Not Found: /favicon.ico
+2025-05-26 09:59:25 [WARNING ] (basehttp.log_message) "GET /favicon.ico HTTP/1.1" 404 179
+2025-05-26 09:59:25 [WARNING ] (basehttp.log_message) "GET /favicon.ico HTTP/1.1" 404 179
+2025-05-26 10:00:09 [WARNING ] (log.log_response) Method Not Allowed: /api/v2/rest_auth/users/register/
+2025-05-26 10:00:09 [WARNING ] (log.log_response) Method Not Allowed: /api/v2/rest_auth/users/register/
+2025-05-26 10:00:09 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/users/register/ HTTP/1.1" 405 10408
+2025-05-26 10:00:09 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/users/register/ HTTP/1.1" 405 10408
+2025-05-26 10:00:50 [WARNING ] (log.log_response) Method Not Allowed: /api/v2/rest_auth/users/register/
+2025-05-26 10:00:50 [WARNING ] (log.log_response) Method Not Allowed: /api/v2/rest_auth/users/register/
+2025-05-26 10:00:50 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/users/register/ HTTP/1.1" 405 10408
+2025-05-26 10:00:50 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/users/register/ HTTP/1.1" 405 10408
+2025-05-26 10:00:50 [WARNING ] (log.log_response) Not Found: /static/rest_framework/css/bootstrap.min.css
+2025-05-26 10:00:50 [WARNING ] (log.log_response) Not Found: /static/rest_framework/css/bootstrap.min.css
+2025-05-26 10:00:50 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 404 179
+2025-05-26 10:00:50 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 404 179
+2025-05-26 10:00:51 [WARNING ] (log.log_response) Not Found: /static/rest_framework/css/bootstrap-tweaks.css
+2025-05-26 10:00:51 [WARNING ] (log.log_response) Not Found: /static/rest_framework/css/prettify.css
+2025-05-26 10:00:51 [WARNING ] (log.log_response) Not Found: /static/rest_framework/css/bootstrap-tweaks.css
+2025-05-26 10:00:51 [WARNING ] (log.log_response) Not Found: /static/rest_framework/css/prettify.css
+2025-05-26 10:00:51 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 404 179
+2025-05-26 10:00:51 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 404 179
+2025-05-26 10:00:51 [WARNING ] (log.log_response) Not Found: /static/rest_framework/css/default.css
+2025-05-26 10:00:51 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/css/prettify.css HTTP/1.1" 404 179
+2025-05-26 10:00:51 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/css/prettify.css HTTP/1.1" 404 179
+2025-05-26 10:00:51 [WARNING ] (log.log_response) Not Found: /static/rest_framework/css/default.css
+2025-05-26 10:00:51 [WARNING ] (log.log_response) Not Found: /static/rest_framework/js/bootstrap.min.js
+2025-05-26 10:00:51 [INFO    ] (basehttp.handle_error) - Broken pipe from ('127.0.0.1', 51597)
+2025-05-26 10:00:51 [INFO    ] (basehttp.handle_error) - Broken pipe from ('127.0.0.1', 51597)
+2025-05-26 10:00:51 [WARNING ] (log.log_response) Not Found: /static/rest_framework/js/bootstrap.min.js
+2025-05-26 10:00:51 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/css/default.css HTTP/1.1" 404 179
+2025-05-26 10:00:51 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/css/default.css HTTP/1.1" 404 179
+2025-05-26 10:00:51 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 404 179
+2025-05-26 10:00:51 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 404 179
+2025-05-26 10:00:51 [WARNING ] (log.log_response) Not Found: /static/rest_framework/js/ajax-form.js
+2025-05-26 10:00:51 [WARNING ] (log.log_response) Not Found: /static/rest_framework/js/ajax-form.js
+2025-05-26 10:00:51 [WARNING ] (log.log_response) Not Found: /static/rest_framework/js/jquery-3.7.1.min.js
+2025-05-26 10:00:51 [WARNING ] (log.log_response) Not Found: /static/rest_framework/js/csrf.js
+2025-05-26 10:00:51 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 404 179
+2025-05-26 10:00:51 [WARNING ] (log.log_response) Not Found: /static/rest_framework/js/prettify-min.js
+2025-05-26 10:00:51 [WARNING ] (log.log_response) Not Found: /static/rest_framework/js/prettify-min.js
+2025-05-26 10:00:51 [WARNING ] (log.log_response) Not Found: /static/rest_framework/js/jquery-3.7.1.min.js
+2025-05-26 10:00:51 [WARNING ] (log.log_response) Not Found: /static/rest_framework/js/csrf.js
+2025-05-26 10:00:51 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 404 179
+2025-05-26 10:00:51 [WARNING ] (log.log_response) Not Found: /static/rest_framework/js/default.js
+2025-05-26 10:00:51 [WARNING ] (log.log_response) Not Found: /static/rest_framework/js/default.js
+2025-05-26 10:00:56 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 404 179
+2025-05-26 10:00:56 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 404 179
+2025-05-26 10:00:56 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 404 179
+2025-05-26 10:00:56 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 404 179
+2025-05-26 10:00:56 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/csrf.js HTTP/1.1" 404 179
+2025-05-26 10:00:56 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/csrf.js HTTP/1.1" 404 179
+2025-05-26 10:00:56 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/default.js HTTP/1.1" 404 179
+2025-05-26 10:00:56 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/default.js HTTP/1.1" 404 179
+2025-05-26 10:00:56 [WARNING ] (log.log_response) Not Found: /static/rest_framework/js/load-ajax-form.js
+2025-05-26 10:00:56 [WARNING ] (log.log_response) Not Found: /static/rest_framework/js/load-ajax-form.js
+2025-05-26 10:00:56 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 404 179
+2025-05-26 10:00:56 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 404 179
+2025-05-26 10:00:59 [WARNING ] (log.log_response) Method Not Allowed: /api/v2/rest_auth/users/register/
+2025-05-26 10:00:59 [WARNING ] (log.log_response) Method Not Allowed: /api/v2/rest_auth/users/register/
+2025-05-26 10:00:59 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/users/register/ HTTP/1.1" 405 10408
+2025-05-26 10:00:59 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/users/register/ HTTP/1.1" 405 10408
+2025-05-26 10:00:59 [WARNING ] (log.log_response) Not Found: /static/rest_framework/css/bootstrap.min.css
+2025-05-26 10:00:59 [WARNING ] (log.log_response) Not Found: /static/rest_framework/css/bootstrap.min.css
+2025-05-26 10:00:59 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 404 179
+2025-05-26 10:00:59 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 404 179
+2025-05-26 10:00:59 [WARNING ] (log.log_response) Not Found: /static/rest_framework/css/prettify.css
+2025-05-26 10:00:59 [WARNING ] (log.log_response) Not Found: /static/rest_framework/css/prettify.css
+2025-05-26 10:00:59 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/css/prettify.css HTTP/1.1" 404 179
+2025-05-26 10:00:59 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/css/prettify.css HTTP/1.1" 404 179
+2025-05-26 10:00:59 [WARNING ] (log.log_response) Not Found: /static/rest_framework/css/default.css
+2025-05-26 10:00:59 [WARNING ] (log.log_response) Not Found: /static/rest_framework/css/default.css
+2025-05-26 10:00:59 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/css/default.css HTTP/1.1" 404 179
+2025-05-26 10:00:59 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/css/default.css HTTP/1.1" 404 179
+2025-05-26 10:00:59 [WARNING ] (log.log_response) Not Found: /static/rest_framework/js/ajax-form.js
+2025-05-26 10:00:59 [WARNING ] (log.log_response) Not Found: /static/rest_framework/js/ajax-form.js
+2025-05-26 10:00:59 [WARNING ] (log.log_response) Not Found: /static/rest_framework/css/bootstrap-tweaks.css
+2025-05-26 10:00:59 [WARNING ] (log.log_response) Not Found: /static/rest_framework/js/jquery-3.7.1.min.js
+2025-05-26 10:00:59 [WARNING ] (log.log_response) Not Found: /static/rest_framework/js/bootstrap.min.js
+2025-05-26 10:00:59 [WARNING ] (log.log_response) Not Found: /static/rest_framework/js/bootstrap.min.js
+2025-05-26 10:00:59 [WARNING ] (log.log_response) Not Found: /static/rest_framework/js/jquery-3.7.1.min.js
+2025-05-26 10:00:59 [WARNING ] (log.log_response) Not Found: /static/rest_framework/css/bootstrap-tweaks.css
+2025-05-26 10:00:59 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 404 179
+2025-05-26 10:00:59 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 404 179
+2025-05-26 10:00:59 [WARNING ] (log.log_response) Not Found: /static/rest_framework/js/csrf.js
+2025-05-26 10:00:59 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 404 179
+2025-05-26 10:00:59 [WARNING ] (log.log_response) Not Found: /static/rest_framework/js/prettify-min.js
+2025-05-26 10:00:59 [WARNING ] (log.log_response) Not Found: /static/rest_framework/js/prettify-min.js
+2025-05-26 10:00:59 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 404 179
+2025-05-26 10:00:59 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 404 179
+2025-05-26 10:00:59 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 404 179
+2025-05-26 10:00:59 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 404 179
+2025-05-26 10:00:59 [WARNING ] (log.log_response) Not Found: /static/rest_framework/js/csrf.js
+2025-05-26 10:00:59 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 404 179
+2025-05-26 10:00:59 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 404 179
+2025-05-26 10:00:59 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 404 179
+2025-05-26 10:00:59 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/csrf.js HTTP/1.1" 404 179
+2025-05-26 10:00:59 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/csrf.js HTTP/1.1" 404 179
+2025-05-26 10:00:59 [WARNING ] (log.log_response) Not Found: /static/rest_framework/js/default.js
+2025-05-26 10:00:59 [WARNING ] (log.log_response) Not Found: /static/rest_framework/js/load-ajax-form.js
+2025-05-26 10:00:59 [WARNING ] (log.log_response) Not Found: /static/rest_framework/js/load-ajax-form.js
+2025-05-26 10:00:59 [WARNING ] (log.log_response) Not Found: /static/rest_framework/js/default.js
+2025-05-26 10:00:59 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 404 179
+2025-05-26 10:00:59 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 404 179
+2025-05-26 10:00:59 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/default.js HTTP/1.1" 404 179
+2025-05-26 10:00:59 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/default.js HTTP/1.1" 404 179
+2025-05-26 10:01:02 [WARNING ] (log.log_response) Method Not Allowed: /api/v2/rest_auth/users/register/
+2025-05-26 10:01:02 [WARNING ] (log.log_response) Method Not Allowed: /api/v2/rest_auth/users/register/
+2025-05-26 10:01:02 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/users/register/ HTTP/1.1" 405 10408
+2025-05-26 10:01:02 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/users/register/ HTTP/1.1" 405 10408
+2025-05-26 10:01:02 [WARNING ] (log.log_response) Not Found: /static/rest_framework/css/bootstrap.min.css
+2025-05-26 10:01:02 [WARNING ] (log.log_response) Not Found: /static/rest_framework/css/bootstrap.min.css
+2025-05-26 10:01:02 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 404 179
+2025-05-26 10:01:02 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 404 179
+2025-05-26 10:01:02 [WARNING ] (log.log_response) Not Found: /static/rest_framework/css/prettify.css
+2025-05-26 10:01:02 [WARNING ] (log.log_response) Not Found: /static/rest_framework/css/prettify.css
+2025-05-26 10:01:02 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/css/prettify.css HTTP/1.1" 404 179
+2025-05-26 10:01:02 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/css/prettify.css HTTP/1.1" 404 179
+2025-05-26 10:01:02 [WARNING ] (log.log_response) Not Found: /static/rest_framework/css/default.css
+2025-05-26 10:01:02 [WARNING ] (log.log_response) Not Found: /static/rest_framework/js/default.js
+2025-05-26 10:01:02 [WARNING ] (log.log_response) Not Found: /static/rest_framework/js/default.js
+2025-05-26 10:01:02 [WARNING ] (log.log_response) Not Found: /static/rest_framework/css/default.css
+2025-05-26 10:01:02 [WARNING ] (log.log_response) Not Found: /static/rest_framework/js/jquery-3.7.1.min.js
+2025-05-26 10:01:02 [WARNING ] (log.log_response) Not Found: /static/rest_framework/js/ajax-form.js
+2025-05-26 10:01:02 [WARNING ] (log.log_response) Not Found: /static/rest_framework/js/ajax-form.js
+2025-05-26 10:01:02 [WARNING ] (log.log_response) Not Found: /static/rest_framework/css/bootstrap-tweaks.css
+2025-05-26 10:01:02 [WARNING ] (log.log_response) Not Found: /static/rest_framework/js/jquery-3.7.1.min.js
+2025-05-26 10:01:02 [WARNING ] (log.log_response) Not Found: /static/rest_framework/js/csrf.js
+2025-05-26 10:01:02 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/default.js HTTP/1.1" 404 179
+2025-05-26 10:01:02 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/css/default.css HTTP/1.1" 404 179
+2025-05-26 10:01:02 [WARNING ] (log.log_response) Not Found: /static/rest_framework/css/bootstrap-tweaks.css
+2025-05-26 10:01:02 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 404 179
+2025-05-26 10:01:02 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 404 179
+2025-05-26 10:01:02 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/default.js HTTP/1.1" 404 179
+2025-05-26 10:01:02 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 404 179
+2025-05-26 10:01:02 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/css/default.css HTTP/1.1" 404 179
+2025-05-26 10:01:02 [WARNING ] (log.log_response) Not Found: /static/rest_framework/js/csrf.js
+2025-05-26 10:01:02 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 404 179
+2025-05-26 10:01:02 [WARNING ] (log.log_response) Not Found: /static/rest_framework/js/bootstrap.min.js
+2025-05-26 10:01:02 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 404 179
+2025-05-26 10:01:02 [WARNING ] (log.log_response) Not Found: /static/rest_framework/js/load-ajax-form.js
+2025-05-26 10:01:02 [WARNING ] (log.log_response) Not Found: /static/rest_framework/js/load-ajax-form.js
+2025-05-26 10:01:02 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 404 179
+2025-05-26 10:01:02 [WARNING ] (log.log_response) Not Found: /static/rest_framework/js/bootstrap.min.js
+2025-05-26 10:01:02 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/csrf.js HTTP/1.1" 404 179
+2025-05-26 10:01:02 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/csrf.js HTTP/1.1" 404 179
+2025-05-26 10:01:02 [WARNING ] (log.log_response) Not Found: /static/rest_framework/js/prettify-min.js
+2025-05-26 10:01:02 [WARNING ] (log.log_response) Not Found: /static/rest_framework/js/prettify-min.js
+2025-05-26 10:01:02 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 404 179
+2025-05-26 10:01:02 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 404 179
+2025-05-26 10:01:02 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 404 179
+2025-05-26 10:01:02 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 404 179
+2025-05-26 10:01:02 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 404 179
+2025-05-26 10:01:02 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 404 179
