@@ -3422,3 +3422,37 @@ LINE 1: ...ession_data", "django_session"."expire_date" FROM "django_se...
 2025-05-26 10:01:02 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 404 179
 2025-05-26 10:01:02 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 404 179
 2025-05-26 10:01:02 [WARNING ] (basehttp.log_message) "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 404 179
+2025-05-26 10:19:26 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-26 10:19:26 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-26 10:20:05 [WARNING ] (log.log_response) Method Not Allowed: /api/v2/rest_auth/predict/
+2025-05-26 10:20:05 [WARNING ] (log.log_response) Method Not Allowed: /api/v2/rest_auth/predict/
+2025-05-26 10:20:05 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/predict/ HTTP/1.1" 405 10425
+2025-05-26 10:20:05 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/predict/ HTTP/1.1" 405 10425
+2025-05-26 10:20:05 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+2025-05-26 10:20:05 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+2025-05-26 10:20:05 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+2025-05-26 10:20:05 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+2025-05-26 10:20:05 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+2025-05-26 10:20:05 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+2025-05-26 10:20:05 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+2025-05-26 10:20:05 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+2025-05-26 10:20:05 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+2025-05-26 10:20:05 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+2025-05-26 10:20:06 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+2025-05-26 10:20:06 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+2025-05-26 10:20:06 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+2025-05-26 10:20:06 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+2025-05-26 10:20:06 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+2025-05-26 10:20:06 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+2025-05-26 10:20:06 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+2025-05-26 10:20:06 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+2025-05-26 10:20:06 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+2025-05-26 10:20:06 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+2025-05-26 10:20:06 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+2025-05-26 10:20:06 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+2025-05-26 10:20:06 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+2025-05-26 10:20:06 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+2025-05-26 10:41:05 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\config\settings\production.py changed, reloading.
+2025-05-26 10:41:05 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\config\settings\production.py changed, reloading.
+2025-05-26 10:41:10 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-26 10:41:10 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
