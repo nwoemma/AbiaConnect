@@ -15,23 +15,36 @@ ALLOWED_HOSTS = [
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
-if os.environ.get('DATABASE_URL'):
-    DATABASES = {
-        'default': dj_database_url.config(
-            default=os.environ.get('DATABASE_URL'),
-            conn_max_age=600,
-            ssl_require=True
-        )
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'abia2025',
+        'USER': 'abia_user',
+        'PASSWORD': 'BYABPZ9xPxY7U3rsamblVnOtnyKSEao9',
+        'HOST': 'dpg-d0otn1ruibrs7384a9og-a.frankfurt-postgres.render.com',
+        'PORT': '5432',
+        # Add this line if your host requires SSL
+        'OPTIONS': {
+            'sslmode': 'require',
+        },
     }
-else:
-    # Local development default database (SQLite)
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
-    }
+}
+# if os.environ.get('DATABASE_URL'):
+#     DATABASES = {
+#         'default': dj_database_url.config(
+#             default=os.environ.get('DATABASE_URL'),
+#             conn_max_age=600,
+#             ssl_require=True
+#         )
+#     }
+# else:
+#     # Local development default database (SQLite)
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.sqlite3',
+#             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#         }
+#     }
 # SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 # DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 # DATABASES = {
