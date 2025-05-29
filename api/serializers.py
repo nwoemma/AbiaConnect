@@ -1,19 +1,18 @@
 from rest_framework import serializers
-from accounts.models import User, Profile
-from news.models import  Notification, Announcement
+from accounts.models import User
+from news.models import  Notification, Announcement, Report, Emergency, Project, Suggestion
 from chats.models import Chat,Message,ChatDetails,ChatCategory
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['id', 'username', 'email', 'password', 'is_staff','first_name', 'last_name']
+        fields = ['id', 'phone', 'email', 'password','password2', 'is_staff','first_name',"profile_pic", 'last_name']
         read_only_fields = ['id', 'is_staff']
     def create(self, validated_data):
         user = User.objects.create_user(
             email=validated_data['email'],
             first_name=validated_data.get('first_name', ''),  # Handle optional fields
-            last_name=validated_data.get('last_name', ''),
-            username=validated_data['username']
+            last_name=validated_data.get('last_name', ''),            
             #password=validated_data['password'], #DO NOT DO THIS
             )
         user.set_password(validated_data['password'])
@@ -32,9 +31,8 @@ class UserSerializer(serializers.ModelSerializer):
 
 class ProfileSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Profile
-        fields = ['preferred_language']
-
+        model = User
+        fields = ['id', 'email', 'phone', 'profile_pic']
 class MessageSerializer(serializers.ModelSerializer):
     receiver = serializers.PrimaryKeyRelatedField(queryset=User.objects.all(), required=False)
 
@@ -60,7 +58,7 @@ class AnnouncementSerializer(serializers.ModelSerializer):
     class Meta:
         model = Announcement
         fields = "__all__"
-        read_only_fields = ['id', 'created_by']
+        read_only_fields = ['id', 'created_by', "broadcast_at"]
 
 class ChatDetailSerializer(serializers.ModelSerializer):
     class Meta:
@@ -72,3 +70,27 @@ class ChatCategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = ChatCategory
         fields = "__all__"
+        
+        
+class ReportSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Report
+        fields= "__all__"
+        # read_only_fields = ['id', 'created_at', 'user']
+        
+class EmergencySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Emergency
+        fields = "__all__"
+        # read_only_fields = ['id', 'created_at', 'user']
+        
+class ProjectSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Project
+        fields = "__all__"
+        
+class SuggestionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Suggestion
+        fields = "__all__"
+        

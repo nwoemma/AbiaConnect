@@ -22,17 +22,18 @@ from django.views.decorators.csrf import csrf_exempt
 
 from rest_framework import status
 from rest_framework.decorators import api_view, permission_classes
-from rest_framework.permissions import AllowAny, IsAuthenticated
+from rest_framework.permissions import AllowAny, IsAuthenticated, IsAdminUser
 from rest_framework.response import Response
+from rest_framework.authtoken.models import Token
 
 from rest_framework_simplejwt.authentication import JWTAuthentication
 from rest_framework_simplejwt.exceptions import InvalidToken, TokenError, AuthenticationFailed
 from rest_framework_simplejwt.tokens import RefreshToken
 
 import pickle
-from accounts.models import User, Profile
+from accounts.models import User
 from chats.models import Chat, Conversion, ChatDetails, ChatCategory, Message
-from news.models import Notification, Announcement
+from news.models import Notification, Announcement,Emergency, Report, Project, Suggestion
 
 from .serializers import (
     AnnouncementSerializer,
@@ -43,6 +44,10 @@ from .serializers import (
     NotificationSerializer,
     ProfileSerializer,
     UserSerializer,
+    EmergencySerializer,
+    ReportSerializer,
+    SuggestionSerializer,
+    ProjectSerializer,
 )
 import numpy as np
 import joblib
@@ -184,11 +189,9 @@ def register(request):
     serializer = UserSerializer(data=request.data)
     serializer.is_valid(raise_exception=True)
     user = serializer.save()
-    Profile.objects.create(user=user)
-    tokens = get_tokens_for_user(user)
+    token, _ = Token.objects.get_or_create(user=user)
     return Response({
-        'refresh': tokens['refresh'],
-        'access': tokens['access'],
+        'token': token.key,
     }, status=status.HTTP_201_CREATED)
 
 @api_view(['POST'])
@@ -199,10 +202,10 @@ def login_user(request):
     user = authenticate(request, email=email, password=password)
     if user is not None:
         login(request, user)
-        tokens = get_tokens_for_user(user)
+        token, _ = Token.objects.get_or_create(user=user)
         return Response({
-            'refresh': tokens['refresh'],
-            'access': tokens['access'],
+            # 'refresh': tokens['refresh'],
+            'token': token.key,
         }, status=status.HTTP_200_OK)
     return Response({'error': 'Invalid credentials'}, status=status.HTTP_401_UNAUTHORIZED)
 
@@ -230,10 +233,10 @@ def user_profile(request):
         )
     user = request.user
     try:
-        profile = Profile.objects.get(user=user)
+        profile = User.objects.get(user=user)
         logger.debug(f"Profile found for user: {profile}")
-    except Profile.DoesNotExist:
-        profile = Profile(user=user)
+    except User.DoesNotExist:
+        profile = User(user=user)
         profile.save()
         logger.debug(f"Profile created for user: {profile}")
 
@@ -355,7 +358,7 @@ def create_chat_message(request, chat_pk):
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def notification_list(request):
-    notifications = Notification.objects.filter(user=request.user)
+    notifications = Notification.objects.filter(user=request.user).order_by("-created_at")
     serializer = NotificationSerializer(notifications, many=True)
     return Response(serializer.data, status=status.HTTP_200_OK)
 
@@ -373,22 +376,19 @@ def notification_mark_all_as_read(request):
     Notification.objects.filter(user=request.user).update(is_read=True)
     return Response({'message': 'All notifications marked as read'}, status=status.HTTP_200_OK)
 
-@api_view(['GET'])
-@permission_classes([AllowAny]) 
+@api_view(['GET']) 
 def chat_category_list(request):
     categories = ChatCategory.objects.all()
     serializer = ChatCategorySerializer(categories, many=True)
     return Response(serializer.data, status=status.HTTP_200_OK)
 
-@api_view(['GET'])
-@permission_classes([AllowAny]) 
+@api_view(['GET']) 
 def announcement_list(request):
     announcements = Announcement.objects.all()
     serializer = AnnouncementSerializer(announcements, many=True)
     return Response(serializer.data, status=status.HTTP_200_OK)
 
 @api_view(['POST'])
-@permission_classes([AllowAny])
 def predict_car_price(request):
     data = request.data
 
@@ -431,9 +431,9 @@ def predict_car_price(request):
         return Response({'predicted_price': predicted_price}, status=200)
     except Exception as e:
         return Response({'error': str(e)}, status=500) 
+    
 @csrf_exempt
 @api_view(["POST"])
-@permission_classes([AllowAny])
 def sentiment_api(request):
     if request.method != 'POST':
         return HttpResponseBadRequest("Only POST requests allowed")
@@ -467,3 +467,158 @@ def sentiment_api(request):
     except Exception as e:
         logging.error(f"Sentiment prediction error: {e}")
         return JsonResponse({"error": "Internal server error"}, status=500)
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def list_emergencies(request):
+    emergencies = Emergency.objects.all().order_by('-broadcast_at')
+    serializer = EmergencySerializer(emergencies, many=True)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def create_emergency(request):
+    serializer = EmergencySerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save(created_by=request.user)
+        return Response(serializer.data, status=201)
+    return Response(serializer.errors, status=400)
+
+@api_view(['GET', 'POST'])
+def emergency(request):
+    if request.method == 'GET':
+        return list_emergencies(request)
+    elif request.method == 'POST':
+        return create_emergency(request)
+    else:
+        return Response({'error': 'Method not allowed'}, status=405)
+    
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def list_user_reports(request):
+    reports = Report.objects.filter(user=request.user).order_by('-created_at')
+    serializer = ReportSerializer(reports, many=True)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def submit_report(request):
+    serializer = ReportSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save(user=request.user)
+        return Response(serializer.data, status=201)
+    return Response(serializer.errors, status=400)
+
+@api_view(['GET','POST'])
+def report(request):
+    if request.method == 'GET':
+        return list_user_reports(request)
+    elif request.method == 'POST':
+        return submit_report(request)
+    else:
+        return Response({'error': 'Method not allowed'}, status=405)
+@api_view(['GET'])   
+def list_projects(request):
+    projects = Project.objects.all().order_by('-start_date')
+    serializer = ProjectSerializer(projects, many=True)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+@permission_classes([IsAdminUser])
+def create_project(request):
+    serializer = ProjectSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save(created_by=request.user)
+        return Response(serializer.data, status=201)
+    else:
+        return Response(serializer.errors, status=400)
+@api_view(['GET', 'POST'])
+def project(request):
+    if request.method == 'GET':
+        return list_projects(request)
+    elif request.method == 'POST':
+        return create_project(request)
+    else:
+        return Response({'error': 'Method not allowed'}, status=405)
+
+def list_suggestions(request):
+    suggestions = Suggestion.objects.all().order_by('-created_at')
+    serializer = SuggestionSerializer(suggestions, many=True)
+    return Response(serializer.data)
+
+def create_suggestion(request):
+    serializer = SuggestionSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save(user=request.user)
+        return Response(serializer.data, status=201)
+    else:
+        return Response(serializer.errors, status=400)\
+@api_view(['GET', 'POST'])
+@permission_classes([IsAuthenticated])
+def suggestion(request):
+    if request.method == 'GET':
+        return list_suggestions(request)
+    elif request.method == 'POST':
+        return create_suggestion(request)
+    else:
+        return Response({'error': 'Method not allowed'}, status=405)
+    
+@api_view(['GET'])
+@permission_classes([AllowAny])
+def dashboard(request):
+    user = request.user
+    
+    latest_emergencies = Emergency.objects.order_by('-broadcast_at').first()
+    emergency_info = {
+        'title': latest_emergencies.title if latest_emergencies else None,
+        'content': latest_emergencies.content[:50] if latest_emergencies else None
+    }
+    latest_report = Report.objects.filter(user=user).order_by('-created_at').first()
+    report_info = {
+        "title": latest_report.title if latest_report else None,
+        "description": latest_report.description[:50] if latest_report else None,
+    }
+
+    # Project (latest 1)
+    latest_project = Project.objects.order_by('-start_date').first()
+    project_info = {
+        "name": latest_project.name if latest_project else None,
+        "description": latest_project.description[:50] if latest_project else None,
+    }
+
+    # Suggestion (latest 1 by user)
+    latest_suggestion = Suggestion.objects.filter(user=user).order_by('-created_at').first()
+    suggestion_info = {
+        "title": latest_suggestion.title if latest_suggestion else None,
+        "content": latest_suggestion.content[:50] if latest_suggestion else None,
+    }
+
+    # Notifications
+    notifications = Notification.objects.filter(user=user).order_by('-created_at')[:2]
+    notifications_info = [
+        {"message": n.message, "id": n.id} for n in notifications
+    ]
+    unread_count = Notification.objects.filter(user=user, is_read=False).count()
+    
+    recent_announcements = Announcement.objects.order_by('-broadcast_at')[:2]# Get the latest 2 announcements
+    announcements_info = [
+        {
+            "title": recent_announcements.title,
+            "content": recent_announcements.content[:50],  # Truncate content for display
+            "broadcast_at": recent_announcements.broadcast_at.strftime('%Y-%m-%d %H:%M:%S'),
+            "picture": recent_announcements.picture.url if recent_announcements.picture else None,
+            "created_by": recent_announcements.created_by.get_full_name() if recent_announcements.created_by else "System"
+        }
+    ]
+
+    return Response({
+        "greeting": f"Good Evening",  # Can be dynamic by time of day
+        "user_name": user.get_full_name() or user.username,
+        "emergency": emergency_info,
+        "report": report_info,
+        "project": project_info,
+        "suggestion": suggestion_info,
+        "notifications": notifications_info,
+        "unread_notifications": unread_count,
+        "announcements": announcements_info,
+        }, status=status.HTTP_200_OK)

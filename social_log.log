@@ -3456,3 +3456,181 @@ LINE 1: ...ession_data", "django_session"."expire_date" FROM "django_se...
 2025-05-26 10:41:05 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\config\settings\production.py changed, reloading.
 2025-05-26 10:41:10 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
 2025-05-26 10:41:10 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 12:54:00 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 12:54:00 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 12:55:33 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\views.py changed, reloading.
+2025-05-29 12:55:33 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\views.py changed, reloading.
+2025-05-29 12:55:36 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 12:55:36 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 12:56:03 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\serializers.py changed, reloading.
+2025-05-29 12:56:03 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\serializers.py changed, reloading.
+2025-05-29 12:56:05 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 12:56:05 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 12:56:13 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\serializers.py changed, reloading.
+2025-05-29 12:56:13 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\serializers.py changed, reloading.
+2025-05-29 12:56:15 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 12:56:15 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 12:56:33 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 12:56:33 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 12:57:10 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\views.py changed, reloading.
+2025-05-29 12:57:10 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\views.py changed, reloading.
+2025-05-29 12:57:13 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 12:57:13 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 12:58:04 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\accounts\models.py changed, reloading.
+2025-05-29 12:58:04 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\accounts\models.py changed, reloading.
+2025-05-29 12:58:07 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 12:58:07 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 12:58:17 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\serializers.py changed, reloading.
+2025-05-29 12:58:17 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\serializers.py changed, reloading.
+2025-05-29 12:58:22 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 12:58:22 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 12:59:03 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\accounts\urls.py changed, reloading.
+2025-05-29 12:59:03 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\accounts\urls.py changed, reloading.
+2025-05-29 12:59:05 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 12:59:05 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:12:43 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:12:43 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:12:57 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\views.py changed, reloading.
+2025-05-29 13:12:57 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\views.py changed, reloading.
+2025-05-29 13:13:00 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:13:00 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:13:17 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:13:17 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:13:19 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:13:19 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:13:58 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:13:58 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:14:01 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:14:01 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:14:11 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:14:11 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:14:14 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:14:14 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:14:16 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:14:16 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:14:19 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:14:19 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:14:24 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:14:24 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:14:26 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:14:26 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:14:30 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:14:30 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:14:32 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:14:32 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:14:42 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:14:42 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:14:44 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:14:44 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:15:09 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:15:09 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:15:12 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:15:12 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:15:23 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:15:23 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:15:25 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:15:25 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:15:43 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:15:43 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:15:46 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:15:46 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:15:57 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:15:57 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:15:59 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:15:59 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:16:08 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:16:08 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:16:11 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:16:11 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:16:22 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:16:22 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:16:24 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:16:24 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:17:02 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:17:02 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:17:04 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:17:04 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:17:15 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:17:15 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:17:18 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:17:18 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:17:28 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:17:28 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:17:31 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:17:31 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:17:38 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:17:38 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:17:41 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:17:41 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:18:11 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:18:11 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:18:14 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:18:14 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:18:36 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:18:36 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:18:39 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:18:39 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:18:49 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:18:49 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:18:52 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:18:52 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:19:03 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:19:03 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:19:06 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:19:06 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:19:15 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:19:15 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:19:17 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:19:17 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:20:03 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:20:03 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:20:06 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:20:06 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:20:20 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:20:20 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:20:22 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:20:22 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:20:29 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:20:29 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:20:31 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:20:31 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:20:40 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:20:40 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:20:43 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:20:43 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:20:52 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:20:52 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:20:54 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:20:54 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:21:03 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:21:03 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:21:06 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:21:06 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:21:17 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:21:17 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:21:20 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:21:20 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:21:38 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:21:38 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:21:41 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:21:41 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:21:53 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:21:53 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:21:55 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:21:55 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:22:04 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:22:04 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:22:06 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:22:06 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:22:15 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:22:15 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:22:18 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:22:18 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:22:39 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:22:39 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:22:42 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:22:42 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:22:53 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:22:53 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\urls.py changed, reloading.
+2025-05-29 13:22:55 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-05-29 13:22:55 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader

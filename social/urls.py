@@ -30,8 +30,8 @@ from django.contrib import admin
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v2/rest_auth/', include('api.urls')),
-    path('', include('chats.urls')),
-    path('accounts/', include('accounts.urls', namespace='accounts')),
+    # path('', include('chats.urls')),
+    # path('accounts/', include('accounts.urls', namespace='accounts')),
 
     path('api/schema/', SpectacularAPIView.as_view(permission_classes=[]), name='schema'),
     path('api/docs/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),

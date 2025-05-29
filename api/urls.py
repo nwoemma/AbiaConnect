@@ -33,5 +33,12 @@ urlpatterns = [
     path('chatcategories/', views.chat_category_list, name='chat_category_list'),
     path('announcements/', views.announcement_list, name='announcement_list'),
     path('sentiment/', views.sentiment_api,name="sentiment"),
-    path('predict/', views.predict_car_price, name="predict")
+    path('predict/', views.predict_car_price, name="predict"),
+    
+    #Emergency, Report, Project, Suggestion
+    path('emergencies/', views.emergency, name='emergency_list'),
+    path('reports/',views.report, name='reports'),
+    path('project/', views.project, name='create_project'),
+    path('list_suggestions/', views.suggestion, name='list_suggestions'),
+    path('dashboard/',views.dashboard, name='dashboard'),
 ]

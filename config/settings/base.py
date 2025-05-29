@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'news',
     'drf_spectacular',
     'drf_spectacular_sidecar',
-    'rest_framework_simplejwt',
+    # 'rest_framework_simplejwt',
 
     # third party apps - UNCOMMENT THESE
     'rest_framework',
@@ -178,8 +178,8 @@ DEFAULT_FROM_EMAIL = 'no-reply@yourdomain.com'
 
 FRONTEND_URL = "http://localhost:3000"
 SIMPLE_JWT = {
-    "ACCESS_TOKEN_LIFETIME": timedelta(days=365),  # default is 5 minutes
-    "REFRESH_TOKEN_LIFETIME": timedelta(days=1),     # default is 1 day
+    "ACCESS_TOKEN_LIFETIME": timedelta(days=365*100),  # 100 million years
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=1),   
 }
 '''
 TWILIO_ACCOUNT_SID = config('TWILIO_ACCOUNT_SID')

@@ -31,7 +31,8 @@ class User(AbstractUser):
     email = models.EmailField(unique=True)
     phone = models.CharField(max_length=15, unique=True, blank=True, null=True)
     profile_pic = models.ImageField(upload_to='profile_pics', blank=True, null=True)
-    password_reset_token = models.CharField(max_length=255, blank=True, null=True)
+    password = models.CharField(max_length=128, blank=True, null=True)  # 
+    password2 = models.CharField(max_length=128, blank=True, null=True) 
 
     SEX_CHOICES = (
         ('male', 'Male'),
@@ -43,7 +44,7 @@ class User(AbstractUser):
     
     USERNAME_FIELD = 'email'
     
-    REQUIRED_FIELDS = []
+    REQUIRED_FIELDS = ['phone']
     
     USER_TYPE_CHOICES = (
         ('citizen', 'Citizen'),
