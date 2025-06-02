@@ -50,6 +50,7 @@ from .serializers import (
     ProjectSerializer,
 )
 import numpy as np
+import datetime
 import joblib
 
 
@@ -567,52 +568,50 @@ def suggestion(request):
 @permission_classes([AllowAny])
 def dashboard(request):
     user = request.user
-    
+
     latest_emergencies = Emergency.objects.order_by('-broadcast_at').first()
     emergency_info = {
         'title': latest_emergencies.title if latest_emergencies else None,
         'content': latest_emergencies.content[:50] if latest_emergencies else None
     }
+
     latest_report = Report.objects.filter(user=user).order_by('-created_at').first()
     report_info = {
         "title": latest_report.title if latest_report else None,
         "description": latest_report.description[:50] if latest_report else None,
     }
 
-    # Project (latest 1)
     latest_project = Project.objects.order_by('-start_date').first()
     project_info = {
         "name": latest_project.name if latest_project else None,
         "description": latest_project.description[:50] if latest_project else None,
     }
 
-    # Suggestion (latest 1 by user)
     latest_suggestion = Suggestion.objects.filter(user=user).order_by('-created_at').first()
     suggestion_info = {
         "title": latest_suggestion.title if latest_suggestion else None,
         "content": latest_suggestion.content[:50] if latest_suggestion else None,
     }
 
-    # Notifications
     notifications = Notification.objects.filter(user=user).order_by('-created_at')[:2]
     notifications_info = [
         {"message": n.message, "id": n.id} for n in notifications
     ]
     unread_count = Notification.objects.filter(user=user, is_read=False).count()
-    
-    recent_announcements = Announcement.objects.order_by('-broadcast_at')[:2]# Get the latest 2 announcements
+
+    recent_announcements = Announcement.objects.order_by('-broadcast_at')[:2]
     announcements_info = [
         {
-            "title": recent_announcements.title,
-            "content": recent_announcements.content[:50],  # Truncate content for display
-            "broadcast_at": recent_announcements.broadcast_at.strftime('%Y-%m-%d %H:%M:%S'),
-            "picture": recent_announcements.picture.url if recent_announcements.picture else None,
-            "created_by": recent_announcements.created_by.get_full_name() if recent_announcements.created_by else "System"
-        }
+            "title": ann.title,
+            "content": ann.content[:50],
+            "broadcast_at": ann.broadcast_at.strftime('%Y-%m-%d %H:%M:%S'),
+            "picture": ann.picture.url if ann.picture else None,
+            "created_by": ann.created_by.get_full_name() if ann.created_by else "System"
+        } for ann in recent_announcements
     ]
 
     return Response({
-        "greeting": f"Good Evening",  # Can be dynamic by time of day
+        "greeting": "Good Morning" if datetime.datetime.now().hour < 12 else "Good Afternoon" if datetime.datetime.now().hour < 18 else "Good Evening",
         "user_name": user.get_full_name() or user.username,
         "emergency": emergency_info,
         "report": report_info,
@@ -621,4 +620,4 @@ def dashboard(request):
         "notifications": notifications_info,
         "unread_notifications": unread_count,
         "announcements": announcements_info,
-        }, status=status.HTTP_200_OK)
+    }, status=status.HTTP_200_OK)
