@@ -553,7 +553,7 @@ def create_suggestion(request):
         serializer.save(user=request.user)
         return Response(serializer.data, status=201)
     else:
-        return Response(serializer.errors, status=400)\
+        return Response(serializer.errors, status=400)
 @api_view(['GET', 'POST'])
 @permission_classes([IsAuthenticated])
 def suggestion(request):
@@ -565,7 +565,7 @@ def suggestion(request):
         return Response({'error': 'Method not allowed'}, status=405)
     
 @api_view(['GET'])
-@permission_classes([AllowAny])
+@permission_classes([IsAuthenticated])
 def dashboard(request):
     user = request.user
 
