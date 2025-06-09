@@ -4752,3 +4752,633 @@ TypeError: Field 'id' expected a number but got <django.contrib.auth.models.Anon
 2025-06-03 02:01:08 [WARNING ] (log.log_response) Forbidden: /api/v2/rest_auth/dashboard/
 2025-06-03 02:01:08 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 403 58
 2025-06-03 02:01:08 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 403 58
+2025-06-09 06:50:01 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-06-09 06:50:01 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-06-09 06:50:44 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-06-09 06:50:44 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-06-09 06:52:36 [WARNING ] (log.log_response) Method Not Allowed: /api/v2/rest_auth/users/register/
+2025-06-09 06:52:36 [WARNING ] (log.log_response) Method Not Allowed: /api/v2/rest_auth/users/register/
+2025-06-09 06:52:36 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/users/register/ HTTP/1.1" 405 10408
+2025-06-09 06:52:36 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/users/register/ HTTP/1.1" 405 10408
+2025-06-09 06:53:37 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\views.py changed, reloading.
+2025-06-09 06:53:37 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\views.py changed, reloading.
+2025-06-09 06:53:41 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-06-09 06:53:41 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-06-09 06:54:18 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 06:54:18 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 06:54:18 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 401 9879
+2025-06-09 06:54:18 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 401 9879
+2025-06-09 06:54:19 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+2025-06-09 06:54:19 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+2025-06-09 06:54:19 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+2025-06-09 06:54:19 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+2025-06-09 06:54:19 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+2025-06-09 06:54:19 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+2025-06-09 06:54:19 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+2025-06-09 06:54:19 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+2025-06-09 06:54:19 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+2025-06-09 06:54:19 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+2025-06-09 06:54:19 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+2025-06-09 06:54:19 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+2025-06-09 06:54:19 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+2025-06-09 06:54:19 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+2025-06-09 06:54:19 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+2025-06-09 06:54:19 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+2025-06-09 06:54:19 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+2025-06-09 06:54:19 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+2025-06-09 06:54:19 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+2025-06-09 06:54:19 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+2025-06-09 06:54:19 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+2025-06-09 06:54:19 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+2025-06-09 06:54:20 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+2025-06-09 06:54:20 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+2025-06-09 06:54:22 [WARNING ] (log.log_response) Not Found: /favicon.ico
+2025-06-09 06:54:22 [WARNING ] (log.log_response) Not Found: /favicon.ico
+2025-06-09 06:54:22 [WARNING ] (basehttp.log_message) "GET /favicon.ico HTTP/1.1" 404 3041
+2025-06-09 06:54:22 [WARNING ] (basehttp.log_message) "GET /favicon.ico HTTP/1.1" 404 3041
+2025-06-09 06:54:37 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 06:54:37 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 06:54:37 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/?format=api HTTP/1.1" 401 9912
+2025-06-09 06:54:37 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/?format=api HTTP/1.1" 401 9912
+2025-06-09 06:55:54 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 06:55:54 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 06:55:54 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 401 9879
+2025-06-09 06:55:54 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 401 9879
+2025-06-09 06:55:55 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 06:55:55 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 06:55:55 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 401 9879
+2025-06-09 06:55:55 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 401 9879
+2025-06-09 06:55:55 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+2025-06-09 06:55:55 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+2025-06-09 06:55:55 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+2025-06-09 06:55:55 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+2025-06-09 06:55:55 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+2025-06-09 06:55:55 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+2025-06-09 06:55:55 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+2025-06-09 06:55:55 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+2025-06-09 06:55:55 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+2025-06-09 06:55:55 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+2025-06-09 06:55:55 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+2025-06-09 06:55:55 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+2025-06-09 06:55:55 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+2025-06-09 06:55:55 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+2025-06-09 06:55:55 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+2025-06-09 06:55:55 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+2025-06-09 06:55:55 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+2025-06-09 06:55:55 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+2025-06-09 06:55:55 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+2025-06-09 06:55:55 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+2025-06-09 06:55:55 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+2025-06-09 06:55:55 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+2025-06-09 06:59:07 [WARNING ] (log.log_response) Not Found: /api/v1/rest-auth/dashboard/
+2025-06-09 06:59:07 [WARNING ] (log.log_response) Not Found: /api/v1/rest-auth/dashboard/
+2025-06-09 06:59:07 [WARNING ] (basehttp.log_message) "GET /api/v1/rest-auth/dashboard/ HTTP/1.1" 404 3089
+2025-06-09 06:59:07 [WARNING ] (basehttp.log_message) "GET /api/v1/rest-auth/dashboard/ HTTP/1.1" 404 3089
+2025-06-09 06:59:24 [WARNING ] (log.log_response) Not Found: /api/v1/rest-auth/api/dashboard/
+2025-06-09 06:59:24 [WARNING ] (log.log_response) Not Found: /api/v1/rest-auth/api/dashboard/
+2025-06-09 06:59:24 [WARNING ] (basehttp.log_message) "GET /api/v1/rest-auth/api/dashboard/ HTTP/1.1" 404 3101
+2025-06-09 06:59:24 [WARNING ] (basehttp.log_message) "GET /api/v1/rest-auth/api/dashboard/ HTTP/1.1" 404 3101
+2025-06-09 06:59:59 [WARNING ] (log.log_response) Not Found: /api/v2/rest-auth/api/dashboard/
+2025-06-09 06:59:59 [WARNING ] (log.log_response) Not Found: /api/v2/rest-auth/api/dashboard/
+2025-06-09 06:59:59 [WARNING ] (basehttp.log_message) "GET /api/v2/rest-auth/api/dashboard/ HTTP/1.1" 404 3101
+2025-06-09 06:59:59 [WARNING ] (basehttp.log_message) "GET /api/v2/rest-auth/api/dashboard/ HTTP/1.1" 404 3101
+2025-06-09 07:00:40 [WARNING ] (log.log_response) Not Found: /api/v2/rest_auth/api/dashboard/
+2025-06-09 07:00:40 [WARNING ] (log.log_response) Not Found: /api/v2/rest_auth/api/dashboard/
+2025-06-09 07:00:40 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/api/dashboard/ HTTP/1.1" 404 10241
+2025-06-09 07:00:40 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/api/dashboard/ HTTP/1.1" 404 10241
+2025-06-09 07:01:35 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:01:35 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:01:35 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 401 58
+2025-06-09 07:01:35 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 401 58
+2025-06-09 07:01:50 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:01:50 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:01:50 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 401 58
+2025-06-09 07:01:50 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 401 58
+2025-06-09 07:02:16 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\views.py changed, reloading.
+2025-06-09 07:02:16 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\views.py changed, reloading.
+2025-06-09 07:02:42 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-06-09 07:02:42 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-06-09 07:03:16 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-06-09 07:03:16 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-06-09 07:03:32 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:03:32 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:03:32 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 401 58
+2025-06-09 07:03:32 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 401 58
+2025-06-09 07:04:03 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\views.py changed, reloading.
+2025-06-09 07:04:03 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\views.py changed, reloading.
+2025-06-09 07:04:05 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-06-09 07:04:05 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-06-09 07:05:06 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\views.py changed, reloading.
+2025-06-09 07:05:06 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\views.py changed, reloading.
+2025-06-09 07:05:08 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-06-09 07:05:08 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-06-09 07:05:11 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\views.py changed, reloading.
+2025-06-09 07:05:11 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\views.py changed, reloading.
+2025-06-09 07:05:12 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-06-09 07:05:12 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-06-09 07:05:52 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:05:52 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:05:52 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 401 58
+2025-06-09 07:05:52 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 401 58
+2025-06-09 07:05:53 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:05:53 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:05:53 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 401 58
+2025-06-09 07:05:53 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 401 58
+2025-06-09 07:05:53 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:05:53 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:05:53 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 401 58
+2025-06-09 07:05:53 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 401 58
+2025-06-09 07:05:53 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:05:53 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:05:53 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 401 58
+2025-06-09 07:05:53 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 401 58
+2025-06-09 07:05:53 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:05:53 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:05:53 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 401 58
+2025-06-09 07:05:53 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 401 58
+2025-06-09 07:08:38 [WARNING ] (log.log_response) Method Not Allowed: /api/v2/rest_auth/users/login/
+2025-06-09 07:08:38 [WARNING ] (log.log_response) Method Not Allowed: /api/v2/rest_auth/users/login/
+2025-06-09 07:08:38 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/users/login/ HTTP/1.1" 405 40
+2025-06-09 07:08:38 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/users/login/ HTTP/1.1" 405 40
+2025-06-09 07:08:49 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/users/login/
+2025-06-09 07:08:49 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/users/login/
+2025-06-09 07:08:49 [WARNING ] (basehttp.log_message) "POST /api/v2/rest_auth/users/login/ HTTP/1.1" 401 31
+2025-06-09 07:08:49 [WARNING ] (basehttp.log_message) "POST /api/v2/rest_auth/users/login/ HTTP/1.1" 401 31
+2025-06-09 07:13:09 [INFO    ] (basehttp.log_message) "POST /api/v2/rest_auth/users/register/ HTTP/1.1" 201 52
+2025-06-09 07:13:09 [INFO    ] (basehttp.log_message) "POST /api/v2/rest_auth/users/register/ HTTP/1.1" 201 52
+2025-06-09 07:18:12 [ERROR   ] (log.log_response) Internal Server Error: /api/v2/rest_auth/dashboard/
+Traceback (most recent call last):
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\views.py", line 573, in dashboard
+    latest_emergency = Emergency.objects.order_by('-broadcast_at').first()[:3]
+TypeError: 'NoneType' object is not subscriptable
+2025-06-09 07:18:12 [ERROR   ] (log.log_response) Internal Server Error: /api/v2/rest_auth/dashboard/
+Traceback (most recent call last):
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\views.py", line 573, in dashboard
+    latest_emergency = Emergency.objects.order_by('-broadcast_at').first()[:3]
+TypeError: 'NoneType' object is not subscriptable
+2025-06-09 07:18:12 [ERROR   ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 500 104049
+2025-06-09 07:18:12 [ERROR   ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 500 104049
+2025-06-09 07:19:18 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:19:18 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:19:18 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 401 58
+2025-06-09 07:19:18 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 401 58
+2025-06-09 07:23:43 [WARNING ] (log.log_response) Bad Request: /api/v2/rest_auth/users/register/
+2025-06-09 07:23:43 [WARNING ] (log.log_response) Bad Request: /api/v2/rest_auth/users/register/
+2025-06-09 07:23:43 [WARNING ] (basehttp.log_message) "POST /api/v2/rest_auth/users/register/ HTTP/1.1" 400 50
+2025-06-09 07:23:43 [WARNING ] (basehttp.log_message) "POST /api/v2/rest_auth/users/register/ HTTP/1.1" 400 50
+2025-06-09 07:24:04 [INFO    ] (basehttp.log_message) "POST /api/v2/rest_auth/users/register/ HTTP/1.1" 201 52
+2025-06-09 07:24:04 [INFO    ] (basehttp.log_message) "POST /api/v2/rest_auth/users/register/ HTTP/1.1" 201 52
+2025-06-09 07:25:18 [INFO    ] (basehttp.log_message) "POST /api/v2/rest_auth/users/login/ HTTP/1.1" 200 52
+2025-06-09 07:25:18 [INFO    ] (basehttp.log_message) "POST /api/v2/rest_auth/users/login/ HTTP/1.1" 200 52
+2025-06-09 07:26:38 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:26:38 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:26:38 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 401 58
+2025-06-09 07:26:38 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 401 58
+2025-06-09 07:26:51 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:26:51 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:26:51 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 401 58
+2025-06-09 07:26:51 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 401 58
+2025-06-09 07:26:52 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:26:52 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:26:52 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 401 58
+2025-06-09 07:26:52 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 401 58
+2025-06-09 07:27:53 [WARNING ] (log.log_response) Method Not Allowed: /api/v2/rest_auth/users/login/
+2025-06-09 07:27:53 [WARNING ] (log.log_response) Method Not Allowed: /api/v2/rest_auth/users/login/
+2025-06-09 07:27:53 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/users/login/ HTTP/1.1" 405 40
+2025-06-09 07:27:53 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/users/login/ HTTP/1.1" 405 40
+2025-06-09 07:28:06 [INFO    ] (basehttp.log_message) "POST /api/v2/rest_auth/users/login/ HTTP/1.1" 200 52
+2025-06-09 07:28:06 [INFO    ] (basehttp.log_message) "POST /api/v2/rest_auth/users/login/ HTTP/1.1" 200 52
+2025-06-09 07:31:40 [ERROR   ] (log.log_response) Internal Server Error: /api/v2/rest_auth/dashboard/
+Traceback (most recent call last):
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\views.py", line 573, in dashboard
+    latest_emergency = Emergency.objects.order_by('-broadcast_at').first()[:3]
+TypeError: 'NoneType' object is not subscriptable
+2025-06-09 07:31:40 [ERROR   ] (log.log_response) Internal Server Error: /api/v2/rest_auth/dashboard/
+Traceback (most recent call last):
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\views.py", line 573, in dashboard
+    latest_emergency = Emergency.objects.order_by('-broadcast_at').first()[:3]
+TypeError: 'NoneType' object is not subscriptable
+2025-06-09 07:31:40 [ERROR   ] (basehttp.log_message) "POST /api/v2/rest_auth/dashboard/ HTTP/1.1" 500 103944
+2025-06-09 07:31:40 [ERROR   ] (basehttp.log_message) "POST /api/v2/rest_auth/dashboard/ HTTP/1.1" 500 103944
+2025-06-09 07:31:58 [ERROR   ] (log.log_response) Internal Server Error: /api/v2/rest_auth/dashboard/
+Traceback (most recent call last):
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\views.py", line 573, in dashboard
+    latest_emergency = Emergency.objects.order_by('-broadcast_at').first()[:3]
+TypeError: 'NoneType' object is not subscriptable
+2025-06-09 07:31:58 [ERROR   ] (log.log_response) Internal Server Error: /api/v2/rest_auth/dashboard/
+Traceback (most recent call last):
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\views.py", line 573, in dashboard
+    latest_emergency = Emergency.objects.order_by('-broadcast_at').first()[:3]
+TypeError: 'NoneType' object is not subscriptable
+2025-06-09 07:31:58 [ERROR   ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 500 103931
+2025-06-09 07:31:58 [ERROR   ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 500 103931
+2025-06-09 07:32:44 [ERROR   ] (log.log_response) Internal Server Error: /api/v2/rest_auth/dashboard/
+Traceback (most recent call last):
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\views.py", line 573, in dashboard
+    latest_emergency = Emergency.objects.order_by('-broadcast_at').first()[:3]
+TypeError: 'NoneType' object is not subscriptable
+2025-06-09 07:32:44 [ERROR   ] (log.log_response) Internal Server Error: /api/v2/rest_auth/dashboard/
+Traceback (most recent call last):
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\views.py", line 573, in dashboard
+    latest_emergency = Emergency.objects.order_by('-broadcast_at').first()[:3]
+TypeError: 'NoneType' object is not subscriptable
+2025-06-09 07:32:44 [ERROR   ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 500 103922
+2025-06-09 07:32:44 [ERROR   ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 500 103922
+2025-06-09 07:34:14 [ERROR   ] (log.log_response) Internal Server Error: /api/v2/rest_auth/dashboard/
+Traceback (most recent call last):
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\views.py", line 573, in dashboard
+    latest_emergency = Emergency.objects.order_by('-broadcast_at').first()[:3]
+TypeError: 'NoneType' object is not subscriptable
+2025-06-09 07:34:14 [ERROR   ] (log.log_response) Internal Server Error: /api/v2/rest_auth/dashboard/
+Traceback (most recent call last):
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\views.py", line 573, in dashboard
+    latest_emergency = Emergency.objects.order_by('-broadcast_at').first()[:3]
+TypeError: 'NoneType' object is not subscriptable
+2025-06-09 07:34:14 [ERROR   ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 500 103922
+2025-06-09 07:34:14 [ERROR   ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 500 103922
+2025-06-09 07:36:29 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-06-09 07:36:29 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-06-09 07:37:31 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:37:31 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:37:31 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 401 9879
+2025-06-09 07:37:31 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 401 9879
+2025-06-09 07:37:31 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+2025-06-09 07:37:31 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+2025-06-09 07:37:31 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+2025-06-09 07:37:31 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+2025-06-09 07:37:31 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+2025-06-09 07:37:31 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+2025-06-09 07:37:31 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+2025-06-09 07:37:31 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+2025-06-09 07:37:31 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+2025-06-09 07:37:31 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+2025-06-09 07:37:31 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+2025-06-09 07:37:31 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+2025-06-09 07:37:31 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+2025-06-09 07:37:31 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+2025-06-09 07:37:31 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+2025-06-09 07:37:31 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+2025-06-09 07:37:31 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+2025-06-09 07:37:31 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+2025-06-09 07:37:31 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+2025-06-09 07:37:31 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+2025-06-09 07:37:31 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+2025-06-09 07:37:31 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+2025-06-09 07:37:31 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+2025-06-09 07:37:31 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+2025-06-09 07:38:06 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:38:06 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:38:06 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 401 9879
+2025-06-09 07:38:06 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 401 9879
+2025-06-09 07:38:10 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:38:10 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:38:10 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/?format=api HTTP/1.1" 401 9912
+2025-06-09 07:38:10 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/?format=api HTTP/1.1" 401 9912
+2025-06-09 07:38:16 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:38:16 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:38:16 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/?format=json HTTP/1.1" 401 58
+2025-06-09 07:38:16 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/?format=json HTTP/1.1" 401 58
+2025-06-09 07:38:20 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:38:20 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:38:20 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/?format=json HTTP/1.1" 401 58
+2025-06-09 07:38:20 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/?format=json HTTP/1.1" 401 58
+2025-06-09 07:38:26 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:38:26 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:38:26 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/?format=api HTTP/1.1" 401 9912
+2025-06-09 07:38:26 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/?format=api HTTP/1.1" 401 9912
+2025-06-09 07:39:20 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:39:20 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:39:20 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 401 58
+2025-06-09 07:39:20 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 401 58
+2025-06-09 07:42:57 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:42:57 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:42:57 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/?format=api HTTP/1.1" 401 9912
+2025-06-09 07:42:57 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/?format=api HTTP/1.1" 401 9912
+2025-06-09 07:42:57 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+2025-06-09 07:42:57 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+2025-06-09 07:42:57 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+2025-06-09 07:42:57 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+2025-06-09 07:42:57 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+2025-06-09 07:42:57 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+2025-06-09 07:42:57 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+2025-06-09 07:42:57 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+2025-06-09 07:42:57 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+2025-06-09 07:42:57 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+2025-06-09 07:42:57 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+2025-06-09 07:42:57 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+2025-06-09 07:42:57 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+2025-06-09 07:42:57 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+2025-06-09 07:42:57 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+2025-06-09 07:42:57 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+2025-06-09 07:42:57 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+2025-06-09 07:42:57 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+2025-06-09 07:42:57 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+2025-06-09 07:42:57 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+2025-06-09 07:42:57 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+2025-06-09 07:42:57 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+2025-06-09 07:42:57 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+2025-06-09 07:42:57 [INFO    ] (basehttp.log_message) "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+2025-06-09 07:42:59 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:42:59 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:42:59 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/?format=api HTTP/1.1" 401 9912
+2025-06-09 07:42:59 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/?format=api HTTP/1.1" 401 9912
+2025-06-09 07:43:00 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:43:00 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:43:00 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/?format=api HTTP/1.1" 401 9912
+2025-06-09 07:43:00 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/?format=api HTTP/1.1" 401 9912
+2025-06-09 07:43:01 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:43:01 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:43:01 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/?format=api HTTP/1.1" 401 9912
+2025-06-09 07:43:01 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/?format=api HTTP/1.1" 401 9912
+2025-06-09 07:43:01 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:43:01 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:43:01 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/?format=api HTTP/1.1" 401 9912
+2025-06-09 07:43:01 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/?format=api HTTP/1.1" 401 9912
+2025-06-09 07:43:01 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:43:01 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:43:01 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/?format=api HTTP/1.1" 401 9912
+2025-06-09 07:43:01 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/?format=api HTTP/1.1" 401 9912
+2025-06-09 07:43:02 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:43:02 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:43:02 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/?format=api HTTP/1.1" 401 9912
+2025-06-09 07:43:02 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/?format=api HTTP/1.1" 401 9912
+2025-06-09 07:43:02 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:43:02 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:43:02 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/?format=api HTTP/1.1" 401 9912
+2025-06-09 07:43:02 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/?format=api HTTP/1.1" 401 9912
+2025-06-09 07:43:02 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:43:02 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:43:02 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/?format=api HTTP/1.1" 401 9912
+2025-06-09 07:43:02 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/?format=api HTTP/1.1" 401 9912
+2025-06-09 07:43:02 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:43:02 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:43:02 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/?format=api HTTP/1.1" 401 9912
+2025-06-09 07:43:02 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/?format=api HTTP/1.1" 401 9912
+2025-06-09 07:43:02 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:43:02 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:43:02 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/?format=api HTTP/1.1" 401 9912
+2025-06-09 07:43:02 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/?format=api HTTP/1.1" 401 9912
+2025-06-09 07:43:03 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:43:03 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:43:03 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/?format=api HTTP/1.1" 401 9912
+2025-06-09 07:43:03 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/?format=api HTTP/1.1" 401 9912
+2025-06-09 07:43:03 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:43:03 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:43:03 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/?format=api HTTP/1.1" 401 9912
+2025-06-09 07:43:03 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/?format=api HTTP/1.1" 401 9912
+2025-06-09 07:43:09 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:43:09 [WARNING ] (log.log_response) Unauthorized: /api/v2/rest_auth/dashboard/
+2025-06-09 07:43:09 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/?format=api HTTP/1.1" 401 9912
+2025-06-09 07:43:09 [WARNING ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/?format=api HTTP/1.1" 401 9912
+2025-06-09 07:49:10 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\social\wsgi.py changed, reloading.
+2025-06-09 07:49:10 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\social\wsgi.py changed, reloading.
+2025-06-09 07:49:10 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\social\wsgi.py changed, reloading.
+2025-06-09 07:49:10 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\social\wsgi.py changed, reloading.
+2025-06-09 07:49:29 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-06-09 07:49:29 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-06-09 07:49:30 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-06-09 07:49:30 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-06-09 07:56:34 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\views.py changed, reloading.
+2025-06-09 07:56:34 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\views.py changed, reloading.
+2025-06-09 07:56:35 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\views.py changed, reloading.
+2025-06-09 07:56:35 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\views.py changed, reloading.
+2025-06-09 07:56:37 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-06-09 07:56:37 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-06-09 07:56:37 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-06-09 07:56:37 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-06-09 07:57:08 [ERROR   ] (log.log_response) Internal Server Error: /api/v2/rest_auth/dashboard/
+Traceback (most recent call last):
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\views.py", line 573, in dashboard
+    latest_emergency = Emergency.objects.order_by('-broadcast_at').first()[:3]
+TypeError: 'NoneType' object is not subscriptable
+2025-06-09 07:57:08 [ERROR   ] (log.log_response) Internal Server Error: /api/v2/rest_auth/dashboard/
+Traceback (most recent call last):
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\new_venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\views.py", line 573, in dashboard
+    latest_emergency = Emergency.objects.order_by('-broadcast_at').first()[:3]
+TypeError: 'NoneType' object is not subscriptable
+2025-06-09 07:57:08 [ERROR   ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 500 103922
+2025-06-09 07:57:08 [ERROR   ] (basehttp.log_message) "GET /api/v2/rest_auth/dashboard/ HTTP/1.1" 500 103922
+2025-06-09 08:02:08 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\views.py changed, reloading.
+2025-06-09 08:02:08 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\views.py changed, reloading.
+2025-06-09 08:02:08 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\views.py changed, reloading.
+2025-06-09 08:02:08 [INFO    ] (autoreload.trigger_reload) C:\Users\EMMANUEL CHIZARAM\Desktop\AbiaConnect\api\views.py changed, reloading.
+2025-06-09 08:02:24 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-06-09 08:02:24 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-06-09 08:02:25 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader
+2025-06-09 08:02:25 [INFO    ] (autoreload.run_with_reloader) Watching for file changes with StatReloader

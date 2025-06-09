@@ -1,0 +1,27 @@
+Register API endpoint token and crediential for abiaconnect User 
+url =https://abiaconnect.onrender.com/api/v2/rest_auth/users/register/
+POST 
+{
+      "phone": "+2348012345678",
+      "email": "alice.smith@example.com",
+      "password": "Password123!",
+      "password2": "Password123!",
+      "first_name": "Alice",
+      "last_name": "Smith",
+      "profile_pic": null
+    },
+{
+    "token": "ca7ac5b53f93108711e90a993fcde6aa4c9d1a09"
+}
+
+
+Login API endpoint for abiaconnect
+POST
+url = https://abiaconnect.onrender.com/api/v2/rest_auth/users/login/
+{
+    "email": "alice.smith@example.com",
+    "password": "Password123!"
+}
+{
+    "token": "ca7ac5b53f93108711e90a993fcde6aa4c9d1a09"
+}

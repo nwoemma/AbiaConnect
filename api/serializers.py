@@ -93,4 +93,14 @@ class SuggestionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Suggestion
         fields = "__all__"
-        
+    
+class DashboardSerializer(serializers.Serializer):
+    greeting = serializers.CharField()
+    user_name = serializers.CharField()
+    emergency = EmergencySerializer(allow_null=True)
+    report = ReportSerializer(allow_null=True)
+    project = ProjectSerializer(allow_null=True)
+    suggestion = SuggestionSerializer(allow_null=True)
+    notifications = NotificationSerializer(many=True)
+    unread_notifications = serializers.IntegerField()
+    announcements = AnnouncementSerializer(many=True)

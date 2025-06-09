@@ -48,6 +48,7 @@ from .serializers import (
     ReportSerializer,
     SuggestionSerializer,
     ProjectSerializer,
+    DashboardSerializer
 )
 import numpy as np
 import datetime
@@ -564,60 +565,30 @@ def suggestion(request):
     else:
         return Response({'error': 'Method not allowed'}, status=405)
     
-@api_view(['GET'])
+@api_view(['GET', 'POST'])
 @permission_classes([IsAuthenticated])
 def dashboard(request):
     user = request.user
 
-    latest_emergencies = Emergency.objects.order_by('-broadcast_at').first()
-    emergency_info = {
-        'title': latest_emergencies.title if latest_emergencies else None,
-        'content': latest_emergencies.content[:50] if latest_emergencies else None
-    }
-
-    latest_report = Report.objects.filter(user=user).order_by('-created_at').first()
-    report_info = {
-        "title": latest_report.title if latest_report else None,
-        "description": latest_report.description[:50] if latest_report else None,
-    }
-
-    latest_project = Project.objects.order_by('-start_date').first()
-    project_info = {
-        "name": latest_project.name if latest_project else None,
-        "description": latest_project.description[:50] if latest_project else None,
-    }
-
+    latest_emergency = Emergency.objects.order_by('-broadcast_at')[:3]
+    latest_report = Report.objects.filter(user=user).order_by('-created_at')[:3]
+    latest_project = Project.objects.order_by('-start_date')[:3]
     latest_suggestion = Suggestion.objects.filter(user=user).order_by('-created_at').first()
-    suggestion_info = {
-        "title": latest_suggestion.title if latest_suggestion else None,
-        "content": latest_suggestion.content[:50] if latest_suggestion else None,
-    }
-
     notifications = Notification.objects.filter(user=user).order_by('-created_at')[:2]
-    notifications_info = [
-        {"message": n.message, "id": n.id} for n in notifications
-    ]
     unread_count = Notification.objects.filter(user=user, is_read=False).count()
-
     recent_announcements = Announcement.objects.order_by('-broadcast_at')[:2]
-    announcements_info = [
-        {
-            "title": ann.title,
-            "content": ann.content[:50],
-            "broadcast_at": ann.broadcast_at.strftime('%Y-%m-%d %H:%M:%S'),
-            "picture": ann.picture.url if ann.picture else None,
-            "created_by": ann.created_by.get_full_name() if ann.created_by else "System"
-        } for ann in recent_announcements
-    ]
 
-    return Response({
-        "greeting": "Good Morning" if datetime.datetime.now().hour < 12 else "Good Afternoon" if datetime.datetime.now().hour < 18 else "Good Evening",
-        "user_name": user.get_full_name() or user.username,
-        "emergency": emergency_info,
-        "report": report_info,
-        "project": project_info,
-        "suggestion": suggestion_info,
-        "notifications": notifications_info,
-        "unread_notifications": unread_count,
-        "announcements": announcements_info,
-    }, status=status.HTTP_200_OK)
+    dashboard = {}
+
+    dashboard['greeting'] = f"Hello, {user.first_name}!"
+    dashboard['user_name'] = user.email
+    dashboard['emergency'] = EmergencySerializer(latest_emergency, many=True).data if latest_emergency else []
+    dashboard['report'] = ReportSerializer(latest_report, many=True).data if latest_report else []
+    dashboard['project'] = ProjectSerializer(latest_project, many=True).data if latest_project else []
+    dashboard['suggestion'] = SuggestionSerializer(latest_suggestion).data if latest_suggestion else None
+    dashboard['notifications'] = NotificationSerializer(notifications, many=True).data
+    dashboard['unread_notifications'] = unread_count
+    dashboard['announcements'] = AnnouncementSerializer(recent_announcements, many=True).data
+
+    serializer = DashboardSerializer(dashboard, context={'request': request})
+    return Response(serializer.data, status=status.HTTP_200_OK)
