@@ -6,6 +6,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.hashers import make_password
 from accounts.models import User
 from .serializers import UserSerializer
+from rest_framework.authtoken.models import Token
 
 @api_view(['POST'])
 @permission_classes([AllowAny])
@@ -33,7 +34,9 @@ def sign_up(request):
         'password': make_password(password)
     })
     
-    if serializer.is_valid():
-        user = serializer.save()
-        return Response({'message': 'User created successfully'}, status=status.HTTP_201_CREATED)
-    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    if not serializer.is_valid():
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    user = serializer.save()
+    token = Token.objects.create(user=user) 
+    return Response({"user": user, 'message': 'User created successfully', 'token': token.key}, status=status.HTTP_201_CREATED)
+
