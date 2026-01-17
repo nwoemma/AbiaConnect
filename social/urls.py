@@ -29,7 +29,8 @@ from django.contrib import admin
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/v2/rest_auth/', include('api.urls')),
+    path('api/v1/rest_auth/', include('api.urls')),
+    path('api/v1/finepay_rest_auth/', include('api.finepay_urls')),
     # path('', include('chats.urls')),
     # path('accounts/', include('accounts.urls', namespace='accounts')),
 

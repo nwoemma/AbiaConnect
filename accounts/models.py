@@ -33,7 +33,14 @@ class User(AbstractUser):
     profile_pic = models.ImageField(upload_to='profile_pics', blank=True, null=True)
     password = models.CharField(max_length=128, blank=True, null=True)  # 
     password2 = models.CharField(max_length=128, blank=True, null=True) 
-
+    STATUS = (
+        ('active', 'Active'),
+        ('disabled', 'Disabled'),
+        ('pending', 'Pending'),
+        ("suspended", 'Suspended'),
+        ('Unknown', 'Unknown'),
+    )
+    account_status = models.CharField(max_length=20, default='active', choices=STATUS)  # e.g., active, disabled
     SEX_CHOICES = (
         ('male', 'Male'),
         ('female', 'Female'),

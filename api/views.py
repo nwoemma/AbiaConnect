@@ -7,6 +7,7 @@ import pandas
 import pandas as pd
 import json
 from django.conf import settings
+from django.contrib.auth.hashers import make_password
 from django.core.exceptions import PermissionDenied
 from django.core.mail import send_mail, get_connection
 from django.contrib.auth import authenticate, login, logout
@@ -185,31 +186,86 @@ def send_password_reset_email(request, user):
         logger.error(f"Error sending password reset email: {e}")
         return False # Return false on error
     
-@api_view(['POST'])
-@permission_classes([AllowAny])
-def register(request):
-    serializer = UserSerializer(data=request.data)
-    serializer.is_valid(raise_exception=True)
-    user = serializer.save()
-    token, _ = Token.objects.create(user=user)
-    return Response({
-        'token': token.key,
-    }, status=status.HTTP_201_CREATED)
+# @api_view(['POST'])
+# @permission_classes([AllowAny])
+# def register(request):
+#     serializer = UserSerializer(data=request.data)
+#     serializer.is_valid(raise_exception=True)
+#     user = serializer.save()
+#     token, _ = Token.objects.create(user=user)
+#     return Response({
+#         'token': token.key,
+#     }, status=status.HTTP_201_CREATED)
 
 @api_view(['POST'])
 @permission_classes([AllowAny])
-def login_user(request):
+def sign_up(request):
+    full_name = request.data.get('full_name', '')
+    name_parts = full_name.split()
+    first_name = name_parts[0] if len(name_parts) > 0 else ''
+    last_name = ' '.join(name_parts[1:]) if len(name_parts) > 1 else ''
+    phone = request.data.get('phone')
     email = request.data.get('email')
     password = request.data.get('password')
-    user = authenticate(request, email=email, password=password)
-    if user is not None:
+    confirm_password = request.data.get('confirm_password')
+    
+    if password != confirm_password:
+        return Response({'error': 'Passwords do not match'}, status=status.HTTP_400_BAD_REQUEST)
+    if User.objects.filter(email=email).exists():
+        return Response({'error': 'Email already registered'}, status=status.HTTP_400_BAD_REQUEST)
+    if User.objects.filter(phone=phone).exists():
+        return Response({'error': 'Phone number already registered'}, status=status.HTTP_400_BAD_REQUEST)
+    if not email or not password:
+        return Response({'error': 'Email and password are required'}, status=status.HTTP_400_BAD_REQUEST)
+    
+    serializer = UserSerializer(data={
+        'first_name': first_name,
+        'last_name': last_name,
+        'phone': phone,
+        'email': email,
+        'password': make_password(password)
+    })
+    if not serializer.is_valid():
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+    serializer.is_valid(raise_exception=True)
+    user = serializer.save()
+    token, _ = Token.objects.get_or_create(user=user)
+    return Response({
+        "user": serializer.data,
+        'token': token.key,
+    }, status=status.HTTP_201_CREATED)
+@api_view(['POST'])
+@permission_classes([AllowAny])
+def login_user(request):
+    phone = request.data.get('phone')
+    password = request.data.get('password')
+    if not phone or not password:
+        return Response({'error': 'Phone and password are required'}, status=status.HTTP_400_BAD_REQUEST)
+    try:
+        user = User.objects.get(phone=phone)
+    except User.DoesNotExist:
+        return Response({'error': 'User not found'}, status=status.HTTP_404_NOT_FOUND)
+    user = authenticate(request, email=user.email, password=password)
+    if user:
+        if user.account_status == 'disabled':
+            return Response({'error': 'Account is disabled'}, status=status.HTTP_409_CONFLICT)
+        if user.account_status == 'suspended':
+            return Response({'error': 'Account is suspended'}, status=status.HTTP_403_FORBIDDEN)
+        if user.account_status == 'pending':
+            return Response({'error': 'Account is pending approval'}, status=status.HTTP_406_NOT_ACCEPTABLE)
+        if user.account_status == 'Unknown':
+            return Response({'error': 'Account status is unknown, contact support'}, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
+        
         login(request, user)
         token, _ = Token.objects.get_or_create(user=user)
         return Response({
-            # 'refresh': tokens['refresh'],
+            "user": UserSerializer(user).data,
             'token': token.key,
         }, status=status.HTTP_200_OK)
-    return Response({'error': 'Invalid credentials'}, status=status.HTTP_401_UNAUTHORIZED)
+    else:
+        return Response({'error': 'Invalid credentials'}, status=status.HTTP_401_UNAUTHORIZED)
+    
 
 @api_view(['POST'])
 @permission_classes([AllowAny])
